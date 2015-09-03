@@ -1,0 +1,4 @@
+*DeNigrisPreferences-Platform
+debuggerClass
+
+	^ SpecDebugger.
