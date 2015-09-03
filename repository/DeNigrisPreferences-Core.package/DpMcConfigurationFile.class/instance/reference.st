@@ -1,4 +1,4 @@
-as yet unclassified
+private
 reference
 
 	^ DeNigrisPreferences preferencesFolder / '.mcconfig'.

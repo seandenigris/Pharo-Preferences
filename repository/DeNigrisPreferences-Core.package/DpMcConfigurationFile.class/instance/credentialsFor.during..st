@@ -1,4 +1,4 @@
-as yet unclassified
+private
 credentialsFor: headingString during: aBlock
 
 	| heading username password |

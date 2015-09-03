@@ -1,4 +1,4 @@
-as yet unclassified
+API-mc credentials
 credentialsForSmalltalkHubDuring: aBlock
 
 	self credentialsFor: 'smalltalkhub' during: aBlock.

@@ -1,0 +1,1 @@
+Idea: Install by default with: "MCSmalltalkhubRepository credentialSource: DpMcConfigurationFile new"
