@@ -5,7 +5,7 @@ loadOnce
 	self closeWelcomeWindow.
 	StandardFonts setFontsToLarge.
 	self customizeLauncherImageFolder.
-	self fixIssue5656.
+	"self fixIssue5656."
 	self customizeCompletion.
 	self debuggerClass alwaysOpenFullDebugger: true.
 	WorldState easySelectingWorld: true.

@@ -1,5 +1,6 @@
 Launcher
 customizeLauncherImageFolder
 
-	Smalltalk globals at: #PharoLauncher ifAbsent: [ ^ self ] .
-	PhLDirectoryBasedImageRepository location: FileLocator home / 'Documents' / 'Dynabook' / 'Working Images'.
+	Smalltalk globals
+		at: #PhLDirectoryBasedImageRepository
+		ifPresent: [ :repoClass | repoClass location: FileLocator home / 'Documents' / 'Dynabook' / 'Working Images' ]
