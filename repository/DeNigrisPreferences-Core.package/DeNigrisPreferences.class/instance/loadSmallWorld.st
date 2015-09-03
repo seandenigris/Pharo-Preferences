@@ -1,13 +1,9 @@
 project loading
 loadSmallWorld
-
-	| repo |
-	repo := MCHttpRepository location: 'http://smalltalkhub.com/mc/SeanDeNigris/SmallWorld/main/'.
-	MCRepositoryGroup default addRepository: repo.
-	DeNigrisPreferences new logInToSmalltalkHub.
-	Gofer it
-		smalltalkhubUser: 'SeanDeNigris' project: 'SmallWorld';
-		package: 'ConfigurationOfSmallWorld';
-		load.
-		
-	#ConfigurationOfSmallWorld asClass project bleedingEdge load.
+	NBMacShell
+		run: 'git clone git@github.com:seandenigris/SmallWorld.git ''' , FileLocator imageDirectory fullName , '/SmallWorld'''.
+	Metacello new
+		repository: 'filetree://' , FileLocator imageDirectory fullName , '/SmallWorld/repository';
+		baseline: 'SmallWorld';
+		onConflict: [ :ex | ex allow ];
+		load
