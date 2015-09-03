@@ -1,3 +1,3 @@
-loading
+actions
 configureFormatter
-	"See RBConfigurableFormatter class-side settingss"
+	"See RBConfigurableFormatter class-side settings"
