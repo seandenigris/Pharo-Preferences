@@ -22,7 +22,7 @@
 	"instance" : {
 		"addMyMcRepos" : "SeanDeNigris 3/22/2015 08:10",
 		"areNonUpdateScriptPackagesPresent" : "SeanDeNigris 5/15/2013 12:06",
-		"basicLoadEachStartup" : "SeanDeNigris 11/19/2013 21:48",
+		"basicLoadEachStartup" : "SeanDeNigris 4/29/2015 21:48",
 		"browseMethodsSelect:" : "SeanDeNigris 11/19/2013 12:34",
 		"closeWelcomeWindow" : "SeanDeNigris 4/24/2015 15:50",
 		"confirmCorrectVM" : "SeanDeNigris 12/29/2013 20:01",
@@ -33,7 +33,6 @@
 		"hasLoadOnceChanged" : "SeanDeNigris 7/16/2012 11:56",
 		"informImageFolder" : "SeanDeNigris 2/25/2013 19:51",
 		"initialize" : "SeanDeNigris 8/8/2012 12:45",
-		"installDarkTheme" : "SeanDeNigris 5/6/2014 11:31",
 		"loadDevEnhancements" : "SeanDeNigris 2/25/2013 19:37",
 		"loadEachStartup" : "SeanDeNigris 9/25/2013 13:00",
 		"loadOnce" : "SeanDeNigris 4/29/2015 12:10",
@@ -55,6 +54,7 @@
 		"shutDown:" : "SeanDeNigris 8/8/2012 12:44",
 		"startUp:" : "SeanDeNigris 4/21/2015 22:54",
 		"syncSharedCaches" : "SeanDeNigris 1/24/2014 22:18",
+		"updateTheme" : "SeanDeNigris 4/29/2015 21:50",
 		"useLatAmMirror" : "SeanDeNigris 8/6/2012 22:05",
 		"useSharedCacheRepository" : "SeanDeNigris 10/24/2013 15:40",
 		"wasEachRunThisSession" : "SeanDeNigris 8/8/2012 12:42" } }

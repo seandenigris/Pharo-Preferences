@@ -9,6 +9,7 @@ basicLoadEachStartup
 	self useSharedCacheRepository.
 	self setLocalRepositoryRoot.
 	
+	self updateTheme.
 	self confirmCorrectVM.
 "	self syncSharedCaches."
 
