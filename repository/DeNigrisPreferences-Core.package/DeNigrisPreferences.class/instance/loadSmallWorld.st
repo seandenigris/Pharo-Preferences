@@ -2,7 +2,7 @@ project loading
 loadSmallWorld
 
 	| repo |
-	repo := MCHttpRepository location: 'http://smalltalkhub.com/mc/SeanDeNigris/SmallWorld/main'.
+	repo := MCHttpRepository location: 'http://smalltalkhub.com/mc/SeanDeNigris/SeansVault/main'.
 	MCRepositoryGroup default addRepository: repo.
 	DeNigrisPreferences new logInToSmalltalkHub.
 	Gofer it
