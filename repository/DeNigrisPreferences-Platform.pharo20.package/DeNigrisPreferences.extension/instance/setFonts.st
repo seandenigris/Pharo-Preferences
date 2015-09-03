@@ -1,0 +1,4 @@
+*DeNigrisPreferences-Platform
+setFonts
+
+	StandardFonts setFontsToLarge

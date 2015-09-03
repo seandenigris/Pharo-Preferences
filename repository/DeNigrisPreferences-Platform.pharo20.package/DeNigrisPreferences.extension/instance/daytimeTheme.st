@@ -1,0 +1,3 @@
+*DeNigrisPreferences-Platform
+daytimeTheme
+	^ PharoTheme
