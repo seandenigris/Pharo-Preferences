@@ -3,7 +3,7 @@
 		"basicRun:" : "SeanDeNigris 3/30/2014 18:42",
 		"ensureLatest:branch:ifAbsent:" : "SeanDeNigris 10/7/2013 18:17",
 		"ensureLatestPlatformPackage" : "SeanDeNigris 10/23/2014 16:27",
-		"initialize" : "SeanDeNigris 10/23/2013 13:54",
+		"initialize" : "SeanDeNigris 2/9/2015 13:16",
 		"instance" : "SeanDeNigris 7/16/2012 11:49",
 		"laptopRepositoryRoot" : "SeanDeNigris 11/8/2013 10:11",
 		"localRepositoryRoot" : "SeanDeNigris 11/8/2013 10:12",
@@ -17,7 +17,7 @@
 		"shutDown:" : "SeanDeNigris 8/8/2012 12:43",
 		"startUp:" : "SeanDeNigris 10/23/2013 13:26",
 		"transcriptIsOpen" : "SeanDeNigris 8/8/2012 10:47",
-		"update" : "SeanDeNigris 2/9/2015 10:26",
+		"update" : "SeanDeNigris 8/8/2012 10:57",
 		"usbRepositoryRoot" : "SeanDeNigris 1/24/2014 21:48" },
 	"instance" : {
 		"addMyMetaRepo" : "SeanDeNigris 10/21/2014 14:59",
