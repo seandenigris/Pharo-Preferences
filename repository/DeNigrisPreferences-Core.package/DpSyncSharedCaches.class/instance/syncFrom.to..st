@@ -9,9 +9,8 @@ syncFrom: sourceFolder to: targetFolder
 	- Recursive (-r)
 	- Preserve meta-data (-a = archive)
 	- Verbose (-v)
-	- Compress during transfer (-z)
-	- Copy extended attributes (-E)"
-	commandTemplate := '/usr/bin/rsync -ravzE --ignore-existing  --exclude=".*" "{1}" "{2}"'.
+	- Compress during transfer (-z)"
+	commandTemplate := '/usr/bin/rsync -ravz --ignore-existing --exclude=".DS_Store" --exclude="._*" "{1}" "{2}"'.
 	command := commandTemplate format: { sourceFolder fullNameWithIndicator. targetFolder fullName }.
 	exitCode := DeNigrisPreferences run: command.
 	exitCode = 0 ifFalse: [ self error: 'rsync failed with ', exitCode asString ].

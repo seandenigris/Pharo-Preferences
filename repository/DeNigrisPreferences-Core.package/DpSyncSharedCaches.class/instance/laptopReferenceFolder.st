@@ -1,3 +1,3 @@
 private
 laptopReferenceFolder
-	^ self laptopRepositoryRoot parent / 'Reference'
+	^ '/Users/sean/Squeak/Reference' asFileReference.
