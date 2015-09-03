@@ -3,5 +3,4 @@ initialize
 
 	Smalltalk
 		addToStartUpList: self;
-		addToShutDownList: self.
-	self instance loadEachStartup
+		addToShutDownList: self

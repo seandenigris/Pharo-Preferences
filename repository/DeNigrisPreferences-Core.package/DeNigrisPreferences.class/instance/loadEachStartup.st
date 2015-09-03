@@ -7,6 +7,6 @@ loadEachStartup
 		UIManager default inform: 'Preferences each load already run'.
 		 ^ self ].
 	wasEachRunThisSession := true.
-	self log: 'Updating...'.
-	self class update.
+	"self log: 'Updating...'.
+	self class update."
 	self basicLoadEachStartup.

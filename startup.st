@@ -1,9 +1,10 @@
 StartupLoader default executeAtomicItems: {
-        StartupAction name: 'Load One-time Preferences' code: [
-Gofer it
-        smalltalkhubUser: 'SeanDeNigris' project: 'DeNigrisPreferences';
-        package: 'DeNigrisPreferences-Core';
-        load ] runOnce: true.
-        "StartupAction name: 'Load One-time Preferences' code: [ (Smalltalk at: #DeNigrisPreferences) instance loadOnce ] runOnce: true.
-        StartupAction name: 'Load Preferences at every startup' code: [ (Smalltalk at: #DeNigrisPreferences) instance loadEachStartup ]."
-        StartupAction name: 'Show any startup action errors' code: [ StartupPreferencesLoader default errors ifNotEmpty: [ :errors | errors explore ] ].
+        StartupAction name: 'Load Preferences Project' code: [
+                Metacello new                        repository: 'filetree://', (FileLocator home / 'Dynabook/Repositories/DeNigrisPreferences/repository') fullName;
+                        baseline: 'DeNigrisPreferences';
+                        onConflict: [ :ex | ex allow ];
+                        load.
+                 ] runOnce: true.
+        StartupAction name: 'Show any startup action errors' code: [ StartupPref
+erencesLoader default errors ifNotEmpty: [ :errors | errors explore ] ].
+}.
