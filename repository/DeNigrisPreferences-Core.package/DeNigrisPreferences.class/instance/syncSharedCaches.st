@@ -1,4 +1,5 @@
 utilities
 syncSharedCaches
+	"self new syncSharedCaches"
 
-	DpUsbSharedCache uniqueInstance syncWithLaptop.
+	DpSyncSharedCaches new execute.

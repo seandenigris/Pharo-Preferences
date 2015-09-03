@@ -1,0 +1,14 @@
+{
+	"category" : "DeNigrisPreferences-Core",
+	"classinstvars" : [
+		"usbCache" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"usbCache" ],
+	"name" : "DpSyncSharedCaches",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
