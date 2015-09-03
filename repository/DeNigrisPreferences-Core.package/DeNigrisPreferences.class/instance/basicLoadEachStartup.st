@@ -10,5 +10,5 @@ basicLoadEachStartup
 	self setLocalRepositoryRoot.
 
 	self hasLoadOnceChanged  ifTrue: [ 
-		self log: 'One-time startup script has changed...'.
+		self log: 'Latest version of load-once script has never been run...'.
 		self loadOnce ].

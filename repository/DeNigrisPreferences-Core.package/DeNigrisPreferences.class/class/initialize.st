@@ -2,4 +2,7 @@ class initialization
 initialize
 
 	self ensureLatestPlatformPackage.
-	Smalltalk addToShutDownList: self.
+	Smalltalk
+		addToStartUpList: self;
+		addToShutDownList: self.
+	self instance loadEachStartup.
