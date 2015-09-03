@@ -7,6 +7,7 @@ confirmCorrectVM
 	For Mac, right now we're assuming my home computer"
 	normalVmLocations := 	#(
 		'/usr/local/bin/pharo-vm/Pharo.app/Contents/MacOS/Pharo'
+		'/Volumes/SEAN/Smalltalk/pharo-vm/Pharo.app/Contents/MacOS/Pharo'
 		':\Smalltalk\pharo-vm\Win (92)\Pharo.exe').
 	(normalVmLocations anySatisfy: [ :e | Smalltalk vm vmFileName includesSubstring: e ])
 		ifFalse: [ UIManager default inform: 'Different VM: ', Smalltalk vm vmFileName ].
