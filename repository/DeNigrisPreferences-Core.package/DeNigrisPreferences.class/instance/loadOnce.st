@@ -8,5 +8,5 @@ loadOnce
 	self debuggerClass alwaysOpenFullDebugger: true.
 	WorldState easySelectingWorld: true.
 	Morph cycleHalosBothDirections: true.
-	self addMyMetaRepo.
+	self addMyMcRepos.
 	lastLoadOnce := thisContext method timeStamp.
