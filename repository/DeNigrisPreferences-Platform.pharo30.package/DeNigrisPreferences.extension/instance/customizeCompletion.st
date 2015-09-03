@@ -5,7 +5,8 @@ customizeCompletion
 		enabled: true;
 		caseSensitive: true;
 		expandPrefixes: true;
-		useEnterToAccept: true;
+		useEnterToAccept: false;
 		smartCharacters: true;
 		smartCharactersWithDoubleSpace: '[]{}';
+		spaceAfterCompletion: false;
 		popupAutomaticDelay: 100.
