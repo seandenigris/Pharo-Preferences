@@ -1,4 +1,4 @@
 utilities
 useSharedCacheRepository
 
-	MCCacheRepository cacheDirectory: self class sharedCacheFolder.
+	MCCacheRepository cacheDirectory: self class sharedCacheFolder ensureDirectory.
