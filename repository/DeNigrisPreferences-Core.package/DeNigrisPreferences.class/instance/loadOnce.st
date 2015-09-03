@@ -2,6 +2,7 @@ loading
 loadOnce
 
 	self log: 'Loading one-time startup script...'.
+	self closeWelcomeWindow.
 	StandardFonts setFontsToLarge.
 	self customizeLauncherImageFolder.
 	self fixIssue5656.
@@ -10,4 +11,5 @@ loadOnce
 	WorldState easySelectingWorld: true.
 	Morph cycleHalosBothDirections: true.
 	self addMyMcRepos.
+	self loadProjectFromImageName.
 	lastLoadOnce := thisContext method timeStamp.
