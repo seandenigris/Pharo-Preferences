@@ -21,7 +21,7 @@
 	"instance" : {
 		"areNonUpdateScriptPackagesPresent" : "SeanDeNigris 5/15/2013 12:06",
 		"basicLoadEachStartup" : "SeanDeNigris 11/13/2013 15:17",
-		"browseMethodsSelect:" : "SeanDeNigris 11/11/2013 21:36",
+		"browseMethodsSelect:" : "SeanDeNigris 11/19/2013 12:34",
 		"confirmCorrectVM" : "SeanDeNigris 11/15/2013 15:35",
 		"disableLatAmMirror" : "SeanDeNigris 8/6/2012 22:02",
 		"fixIssue5656" : "SeanDeNigris 1/21/2013 11:42",
@@ -40,6 +40,7 @@
 		"logInToSqueakSource3" : "SeanDeNigris 3/30/2013 08:53",
 		"logOutOfAllRepositories" : "SeanDeNigris 10/23/2013 14:00",
 		"migrate:fromSqueakSourceToSmalltalkHubAs:" : "SeanDeNigris 5/29/2013 09:08",
+		"replace:with:in:" : "SeanDeNigris 11/19/2013 12:41",
 		"setLocalRepositoryRoot" : "SeanDeNigris 1/31/2013 23:13",
 		"shutDown:" : "SeanDeNigris 8/8/2012 12:44",
 		"startUp:" : "SeanDeNigris 10/23/2013 13:30",
