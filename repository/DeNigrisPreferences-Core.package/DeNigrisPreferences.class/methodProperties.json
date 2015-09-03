@@ -2,7 +2,7 @@
 	"class" : {
 		"basicRun:" : "SeanDeNigris 3/30/2014 18:42",
 		"ensureLatest:branch:ifAbsent:" : "SeanDeNigris 10/7/2013 18:17",
-		"ensureLatestPlatformPackage" : "SeanDeNigris 10/24/2013 15:57",
+		"ensureLatestPlatformPackage" : "SeanDeNigris 6/13/2014 17:39",
 		"initialize" : "SeanDeNigris 10/23/2013 13:54",
 		"instance" : "SeanDeNigris 7/16/2012 11:49",
 		"laptopRepositoryRoot" : "SeanDeNigris 11/8/2013 10:11",
@@ -20,6 +20,7 @@
 		"update" : "SeanDeNigris 8/8/2012 10:57",
 		"usbRepositoryRoot" : "SeanDeNigris 1/24/2014 21:48" },
 	"instance" : {
+		"addMyMetaRepo" : "SeanDeNigris 8/7/2014 12:12",
 		"areNonUpdateScriptPackagesPresent" : "SeanDeNigris 5/15/2013 12:06",
 		"basicLoadEachStartup" : "SeanDeNigris 11/19/2013 21:48",
 		"browseMethodsSelect:" : "SeanDeNigris 11/19/2013 12:34",
@@ -33,7 +34,7 @@
 		"installDarkTheme" : "SeanDeNigris 5/6/2014 11:31",
 		"loadDevEnhancements" : "SeanDeNigris 2/25/2013 19:37",
 		"loadEachStartup" : "SeanDeNigris 9/25/2013 13:00",
-		"loadOnce" : "SeanDeNigris 11/5/2013 13:05",
+		"loadOnce" : "SeanDeNigris 8/7/2014 12:11",
 		"loadSetup" : "SeanDeNigris 8/8/2012 13:36",
 		"loadSmallWorld" : "SeanDeNigris 8/8/2012 13:34",
 		"log:" : "SeanDeNigris 8/8/2012 10:42",
