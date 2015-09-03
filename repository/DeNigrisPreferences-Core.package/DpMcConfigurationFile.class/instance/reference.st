@@ -1,4 +1,4 @@
 as yet unclassified
 reference
 
-	^ DeNigrisPreferences localRepositoryRoot / '.mcconfig'.
+	^ DeNigrisPreferences preferencesFolder / '.mcconfig'.
