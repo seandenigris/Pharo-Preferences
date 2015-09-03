@@ -1,4 +1,4 @@
-private
+private-loading
 basicLoadEachStartup
 
 	self log: 'Loading "each startup" script...'.

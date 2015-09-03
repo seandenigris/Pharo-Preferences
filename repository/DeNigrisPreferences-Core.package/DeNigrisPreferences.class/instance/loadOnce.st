@@ -1,4 +1,4 @@
-callbacks
+loading
 loadOnce
 
 	self log: 'Loading one-time startup script...'.

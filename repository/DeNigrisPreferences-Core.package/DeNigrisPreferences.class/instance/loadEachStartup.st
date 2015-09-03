@@ -1,4 +1,4 @@
-callbacks
+loading
 loadEachStartup
 
 	self wasEachRunThisSession ifTrue: [

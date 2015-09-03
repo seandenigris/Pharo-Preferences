@@ -1,4 +1,4 @@
-private
+private-testing
 wasEachRunThisSession
 
 	^ wasEachRunThisSession.
