@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"startupLoader" : "SeanDeNigris 4/23/2015 20:16" },
 	"instance" : {
 		"addMyMetaRepoToConfigurationBrowser" : "SeanDeNigris 10/21/2014 15:00",
 		"changesetSnippets" : "SeanDeNigris 12/2/2013 11:22",
