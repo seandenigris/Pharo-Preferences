@@ -1,6 +1,7 @@
 utilities
-run: str 
+run: aString
 	"self run: 'open http://www.google.com'." 
 
-	<primitive: #primitiveNativeCall module: #NativeBoostPlugin error: errorCode > 
-	^ self nbCall: #( int system (String str) ) module: NativeBoost CLibrary
+	| exitCode |
+	exitCode := self basicRun: aString.
+	exitCode = 0 ifFalse: [ self error: '"', aString, '" failed with ', exitCode asString ].
