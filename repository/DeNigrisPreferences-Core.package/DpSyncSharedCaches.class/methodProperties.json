@@ -4,7 +4,11 @@
 	"instance" : {
 		"execute" : "SeanDeNigris 1/24/2014 22:06",
 		"initialize" : "SeanDeNigris 1/24/2014 22:07",
+		"laptopReferenceFolder" : "SeanDeNigris 1/27/2014 13:14",
+		"laptopRepositoryRoot" : "SeanDeNigris 1/27/2014 13:14",
 		"laptopSharedCache" : "SeanDeNigris 1/24/2014 22:04",
-		"pullFromHome" : "SeanDeNigris 1/26/2014 16:22",
-		"pushFromUSB" : "SeanDeNigris 1/26/2014 16:22",
-		"syncFrom:to:" : "SeanDeNigris 1/26/2014 16:22" } }
+		"pullFromHome" : "SeanDeNigris 1/27/2014 13:15",
+		"pushFromUSB" : "SeanDeNigris 1/27/2014 13:16",
+		"syncFrom:to:" : "SeanDeNigris 1/26/2014 16:22",
+		"usbReferenceFolder" : "SeanDeNigris 1/27/2014 13:15",
+		"usbRepositoryRoot" : "SeanDeNigris 1/27/2014 13:15" } }
