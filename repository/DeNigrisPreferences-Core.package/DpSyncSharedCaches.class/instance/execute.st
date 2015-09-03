@@ -1,7 +1,8 @@
 as yet unclassified
 execute
 
-	usbCache isMounted ifFalse: [ self log: 'Skipping sync: USB not mounted' ].
-	self laptopSharedCache exists ifFalse: [ self log: 'Skipping sync: not on home computer' ].
-	self pushFromUSB.
-	self pullFromHome.
+	self areAllCachesAvailable ifFalse: [
+		 self log: 'Skipping sync: not all caches available'.
+		 ^ self ].
+	self shouldPush ifTrue: [ self pushFromUSB ].
+	self shouldPull ifTrue: [ self pullFromHome ].

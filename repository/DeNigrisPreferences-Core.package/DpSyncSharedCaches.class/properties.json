@@ -4,9 +4,11 @@
 		"usbCache" ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "SeanDeNigris 1/26/2014 16:23",
+	"commentStamp" : "SeanDeNigris 1/28/2014 13:06",
 	"instvars" : [
-		"usbCache" ],
+		"usbCache",
+		"shouldPush",
+		"shouldPull" ],
 	"name" : "DpSyncSharedCaches",
 	"pools" : [
 		 ],
