@@ -1,14 +1,11 @@
 syncing
 pull
 
-	| laptopFiles unsyncedFiles usbFiles isMissingFromUSB |
-	laptopFiles := self laptopSharedCache files.
+	| unsyncedFiles usbFiles isMissingFromUSB |
 	usbFiles := self folder files.
 	isMissingFromUSB := [ :laptopFile | usbFiles noneSatisfy: [ :usb | laptopFile basename = usb basename ] ].
 
-	unsyncedFiles := laptopFiles select: isMissingFromUSB.
-
-	Halt now.
+	unsyncedFiles := self laptopMczFiles select: isMissingFromUSB.
 
 	[ :job |
 		unsyncedFiles do: [ :e | 
