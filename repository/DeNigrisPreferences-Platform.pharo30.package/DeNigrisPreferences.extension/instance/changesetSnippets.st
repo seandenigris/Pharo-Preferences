@@ -4,3 +4,5 @@ changesetSnippets
 	
 	ChangeSorterModel.
 	ChangeSet newChangeSet.
+	ChangeSet newChanges: (ChangeSet named: '').
+	(ChangeSet named: 'Unnamed') assimilateAllChangesFoundIn: (ChangeSet named: '').
