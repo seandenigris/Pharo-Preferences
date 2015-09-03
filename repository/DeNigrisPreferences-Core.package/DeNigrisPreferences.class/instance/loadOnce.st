@@ -4,8 +4,8 @@ loadOnce
 	self log: 'Loading one-time startup script...'.
 	self closeWelcomeWindow.
 	self setFonts.
+	self configureFormatter.
 	self customizeLauncherImageFolder.
-	"self fixIssue5656."
 	self customizeCompletion.
 	self debuggerClass alwaysOpenFullDebugger: true.
 	WorldState easySelectingWorld: true.
