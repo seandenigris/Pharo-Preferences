@@ -15,7 +15,9 @@ menuCommandOn: aBuilder
 			(aBuilder item: #'ss3')
 				action: [ self instance logInToSqueakSource3 ].
 			(aBuilder item: #'sthub')
-				action: [ self instance logInToSmalltalkHub ] ].
+				action: [ self instance logInToSmalltalkHub ].
+			(aBuilder item: #'Logout of all')
+				action: [ self instance logOutOfAllRepositories ] ].
 
 	(aBuilder item: #Bootstraps)
 		with: [
