@@ -1,6 +1,7 @@
 utilities
 update
 
-	self
-		ensureLatest: 'DeNigrisPreferences-Core' branch: '' ifAbsent: false;
-		ensureLatestPlatformPackage.
+	Gofer it
+		smalltalkhubUser: 'SeanDeNigris' project: 'DeNigrisPreferences';
+		configurationOf: 'DeNigrisPreferences';
+		loadDevelopment.
