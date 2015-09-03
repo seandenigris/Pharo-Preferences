@@ -5,7 +5,7 @@ dateMethodLastSubmitted
 
 	| aStamp tokens |
 	aStamp := self timeStamp.
-	tokens := aStamp findBetweenSubStrs: ' 
+	tokens := aStamp findBetweenSubstrings: ' 
 '.  "space is expected delimiter, but cr is sometimes seen, though of mysterious provenance"
 	^ tokens size > 1
 		ifTrue:
