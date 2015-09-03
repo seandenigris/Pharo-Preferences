@@ -1,4 +1,4 @@
-accessing
+locations
 sharedCacheFolder
 
 	^ self localRepositoryRoot / 'Shared Cache'.

@@ -2,6 +2,7 @@ utilities
 saveStartupScript
 
 	| onceAction everyStartupAction loadActionBlock loadAction showErrorsAction |
+	self error: 'broken'.
 	loadActionBlock := [ 
 		Gofer it
 			directory: self repositoryDirectory fullName;

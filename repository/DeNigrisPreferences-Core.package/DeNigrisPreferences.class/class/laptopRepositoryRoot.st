@@ -1,4 +1,4 @@
-accessing
+locations
 laptopRepositoryRoot
 
 	^ FileLocator home / 'Squeak/Repositories'.

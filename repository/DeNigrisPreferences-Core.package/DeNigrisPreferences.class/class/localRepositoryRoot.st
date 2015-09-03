@@ -1,4 +1,4 @@
-accessing
+locations
 localRepositoryRoot
  
 	^ self laptopRepositoryRoot exists

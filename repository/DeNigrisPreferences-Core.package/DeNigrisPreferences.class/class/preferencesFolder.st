@@ -1,8 +1,8 @@
-accessing
+locations
 preferencesFolder
 
 	| generalPreferencesFolder |
 	generalPreferencesFolder := StartupLoader default preferencesGeneralFolder.
 	^ generalPreferencesFolder exists
 		ifTrue: [ generalPreferencesFolder ]
-		ifFalse: [ '/Volumes/NO NAME/Smalltalk/Preferences' asFileReference ].
+		ifFalse: [ self usbRepositoryRoot parent / 'Preferences' ].

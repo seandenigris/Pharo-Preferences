@@ -1,4 +1,6 @@
-accessing
+locations
 usbRepositoryRoot
 
-	^  '/Volumes/NO NAME/Smalltalk/Repositories' asFileReference.
+"	| isMac |
+	isMac := FileLocator imageDirectory pathSegments first = 'Volumes'."
+	^ FileLocator imageDirectory parent parent / 'Repositories'.
