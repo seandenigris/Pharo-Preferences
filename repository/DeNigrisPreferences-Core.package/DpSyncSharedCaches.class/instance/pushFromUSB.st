@@ -1,5 +1,4 @@
 private
 pushFromUSB
 
-	Halt now.
-	self syncFrom: usbCache folder to: self laptopSharedCache.
+	self syncFrom: usbCache folder parent to: self laptopSharedCache parent.
