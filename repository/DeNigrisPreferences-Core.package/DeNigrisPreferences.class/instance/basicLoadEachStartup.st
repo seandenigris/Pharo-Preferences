@@ -10,6 +10,7 @@ basicLoadEachStartup
 	self setLocalRepositoryRoot.
 	
 	self confirmCorrectVM.
+	self syncSharedCaches.
 
 	self hasLoadOnceChanged  ifTrue: [ 
 		self log: 'Latest version of load-once script has never been run...'.
