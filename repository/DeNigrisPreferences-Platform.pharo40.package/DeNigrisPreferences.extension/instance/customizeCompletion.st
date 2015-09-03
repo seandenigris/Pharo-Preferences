@@ -7,6 +7,7 @@ customizeCompletion
 		expandPrefixes: true;
 		useEnterToAccept: false;
 		smartCharacters: true;
-		smartCharactersWithDoubleSpace: '[]{}';
+		smartCharactersWithDoubleSpace: '[]{}||';
 		spaceAfterCompletion: false;
 		popupAutomaticDelay: 100.
+	NECPreferences smartCharactersMapping at: $| put: $|
