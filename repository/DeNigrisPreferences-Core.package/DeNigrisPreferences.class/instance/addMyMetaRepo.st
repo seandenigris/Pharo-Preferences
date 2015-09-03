@@ -1,4 +1,5 @@
 utilities
-addMyMetaRepo.
+addMyMetaRepo
 
-	MCRepositoryGroup default addRepository: (MCHttpRepository location: 'http://smalltalkhub.com/mc/SeanDeNigris/SeansMetaRepo/main')
+	MCRepositoryGroup default addRepository: (MCHttpRepository location: self myMetaRepoUrl asString).
+	self addMyMetaRepoToConfigurationBrowser.
