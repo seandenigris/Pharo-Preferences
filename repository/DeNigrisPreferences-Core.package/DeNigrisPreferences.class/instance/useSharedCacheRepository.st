@@ -5,4 +5,4 @@ useSharedCacheRepository
 		on: Error
 		do: [ | shouldLink |
 			shouldLink := UIManager default confirm: 'Maybe the repository symlink has not been created. create it now?'.
-			shouldLink ifTrue: [ NBMacShell run: 'ln -s ~/Dropbox/Repositories/ ~/Dynabook/Repositories' ] ]
+			shouldLink ifTrue: [ self class run: 'ln -s ~/Dropbox/Repositories/ ~/Dynabook/Repositories' ] ]
