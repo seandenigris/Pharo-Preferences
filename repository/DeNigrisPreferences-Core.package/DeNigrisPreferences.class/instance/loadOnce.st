@@ -3,7 +3,7 @@ loadOnce
 
 	self log: 'Loading one-time startup script...'.
 	self closeWelcomeWindow.
-	SourceCodeFonts setSourceCodeFonts: SourceCodeFonts sizeLarge.
+	self setFonts.
 	self customizeLauncherImageFolder.
 	"self fixIssue5656."
 	self customizeCompletion.
