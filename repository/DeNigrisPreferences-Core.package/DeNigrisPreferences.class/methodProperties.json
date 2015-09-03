@@ -1,7 +1,8 @@
 {
 	"class" : {
 		"basicRun:" : "SeanDeNigris 3/30/2014 18:42",
-		"ensureLatest:branch:ifAbsent:" : "SeanDeNigris 10/7/2013 18:17",
+		"ensureLatest:branch:ifAbsent:" : "SeanDeNigris 7/21/2015 22:35",
+		"ensureLatest:from:branch:ifAbsent:" : "SeanDeNigris 7/21/2015 22:35",
 		"ensureLatestPlatformPackage" : "SeanDeNigris 10/23/2014 16:27",
 		"initialize" : "SeanDeNigris 2/9/2015 13:16",
 		"instance" : "SeanDeNigris 7/16/2012 11:49",
@@ -17,7 +18,7 @@
 		"shutDown:" : "SeanDeNigris 8/8/2012 12:43",
 		"startUp:" : "SeanDeNigris 10/23/2013 13:26",
 		"transcriptIsOpen" : "SeanDeNigris 8/8/2012 10:47",
-		"update" : "SeanDeNigris 8/8/2012 10:57",
+		"update" : "SeanDeNigris 7/21/2015 22:36",
 		"usbRepositoryRoot" : "SeanDeNigris 1/24/2014 21:48" },
 	"instance" : {
 		"addMyMcRepos" : "SeanDeNigris 3/22/2015 08:10",
