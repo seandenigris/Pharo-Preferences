@@ -4,7 +4,8 @@
 		"ensureLatestPlatformPackage" : "SeanDeNigris 10/24/2013 15:57",
 		"initialize" : "SeanDeNigris 10/23/2013 13:54",
 		"instance" : "SeanDeNigris 7/16/2012 11:49",
-		"localRepositoryRoot" : "SeanDeNigris 10/23/2013 13:00",
+		"laptopRepositoryRoot" : "SeanDeNigris 11/8/2013 10:11",
+		"localRepositoryRoot" : "SeanDeNigris 11/8/2013 10:12",
 		"log:" : "SeanDeNigris 10/23/2013 13:34",
 		"menuCommandOn:" : "SeanDeNigris 10/23/2013 13:58",
 		"platformPackageName" : "SeanDeNigris 8/8/2012 11:11",
@@ -15,7 +16,8 @@
 		"shutDown:" : "SeanDeNigris 8/8/2012 12:43",
 		"startUp:" : "SeanDeNigris 10/23/2013 13:26",
 		"transcriptIsOpen" : "SeanDeNigris 8/8/2012 10:47",
-		"update" : "SeanDeNigris 8/8/2012 10:57" },
+		"update" : "SeanDeNigris 8/8/2012 10:57",
+		"usbRepositoryRoot" : "SeanDeNigris 11/8/2013 10:11" },
 	"instance" : {
 		"areNonUpdateScriptPackagesPresent" : "SeanDeNigris 5/15/2013 12:06",
 		"basicLoadEachStartup" : "SeanDeNigris 10/23/2013 13:36",
@@ -40,6 +42,7 @@
 		"setLocalRepositoryRoot" : "SeanDeNigris 1/31/2013 23:13",
 		"shutDown:" : "SeanDeNigris 8/8/2012 12:44",
 		"startUp:" : "SeanDeNigris 10/23/2013 13:30",
+		"syncSharedCaches" : "SeanDeNigris 11/8/2013 10:59",
 		"useLatAmMirror" : "SeanDeNigris 8/6/2012 22:05",
 		"useSharedCacheRepository" : "SeanDeNigris 10/24/2013 15:40",
 		"wasEachRunThisSession" : "SeanDeNigris 8/8/2012 12:42" } }

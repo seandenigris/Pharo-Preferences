@@ -1,0 +1,14 @@
+{
+	"category" : "DeNigrisPreferences-Core",
+	"classinstvars" : [
+		"uniqueInstance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DpUsbSharedCache",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
