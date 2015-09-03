@@ -3,4 +3,4 @@ startUp: newSession
 
 	newSession ifFalse: [ ^ self ].
 	self loadEachStartup.
-	StartupLoader default errors ifNotEmpty: [ :errors | errors explore ].
+	self class startupLoader default errors ifNotEmpty: [ :errors | errors explore ].
