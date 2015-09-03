@@ -12,6 +12,7 @@ basicLoadEachStartup
 	self updateTheme.
 	self confirmCorrectVM.
 "	self syncSharedCaches."
+	self setMcConfigurationFolder.
 
 	self hasLoadOnceChanged  ifTrue: [ 
 		self log: 'Latest version of load-once script has never been run...'.
