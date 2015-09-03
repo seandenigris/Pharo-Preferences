@@ -8,6 +8,8 @@ basicLoadEachStartup
 	"Set paths on each startup because they will be different if we are on a USB stick"
 	self useSharedCacheRepository.
 	self setLocalRepositoryRoot.
+	
+	self confirmCorrectVM.
 
 	self hasLoadOnceChanged  ifTrue: [ 
 		self log: 'Latest version of load-once script has never been run...'.
