@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addMyMetaRepoToConfigurationBrowser" : "SeanDeNigris 10/23/2014 16:38",
 		"changesetSnippets" : "SeanDeNigris 12/2/2013 11:22",
 		"customizeCompletion" : "SeanDeNigris 4/3/2013 16:54",
 		"debuggerClass" : "SeanDeNigris 11/5/2013 13:06",
