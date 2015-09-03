@@ -8,7 +8,7 @@ ensureLatest: packageName branch: branchString ifAbsent: aBoolean
 	| wc currentVersionNumber gofer shouldUpdate |
 	shouldUpdate := false.
 	gofer := Gofer it
-			directory: self repositoryDirectory fullName.
+			url: 'http://smalltalkhub.com/mc/SeanDeNigris/DeNigrisPreferences/main'.
 	branchString isEmpty
 		ifTrue: [ gofer package: packageName ]
 		ifFalse: [ gofer package: packageName constraint: [ :version | version branch = branchString ] ].
