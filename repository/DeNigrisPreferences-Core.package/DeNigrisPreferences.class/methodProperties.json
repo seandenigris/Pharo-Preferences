@@ -2,7 +2,7 @@
 	"class" : {
 		"ensureLatest:branch:ifAbsent:" : "SeanDeNigris 10/7/2013 18:17",
 		"ensureLatestPlatformPackage" : "SeanDeNigris 4/10/2013 09:23",
-		"initialize" : "SeanDeNigris 10/23/2013 13:32",
+		"initialize" : "SeanDeNigris 10/23/2013 13:54",
 		"instance" : "SeanDeNigris 7/16/2012 11:49",
 		"localRepositoryRoot" : "SeanDeNigris 10/23/2013 13:00",
 		"log:" : "SeanDeNigris 10/23/2013 13:34",
