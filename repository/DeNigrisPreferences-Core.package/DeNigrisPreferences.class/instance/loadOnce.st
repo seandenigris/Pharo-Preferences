@@ -5,7 +5,7 @@ loadOnce
 	StandardFonts setFontsToLarge.
 	self fixIssue5656.
 	self customizeCompletion.
-	Debugger alwaysOpenFullDebugger: true.
+	self debuggerClass alwaysOpenFullDebugger: true.
 	WorldState easySelectingWorld: true.
 	Morph cycleHalosBothDirections: true.
 	lastLoadOnce := thisContext method timeStamp.
