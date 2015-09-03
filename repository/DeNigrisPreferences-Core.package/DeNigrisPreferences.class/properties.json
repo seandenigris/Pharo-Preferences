@@ -1,0 +1,15 @@
+{
+	"category" : "DeNigrisPreferences-Core",
+	"classinstvars" : [
+		"instance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lastLoadOnce",
+		"wasEachRunThisSession" ],
+	"name" : "DeNigrisPreferences",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

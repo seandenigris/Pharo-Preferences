@@ -1,0 +1,4 @@
+utilities
+useSharedCacheRepository
+
+	MCCacheRepository cacheDirectory: self class sharedCacheFolder.

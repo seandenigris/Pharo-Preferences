@@ -1,0 +1,4 @@
+utilities
+setLocalRepositoryRoot
+
+	MCDirectoryRepository defaultDirectoryName: self class localRepositoryRoot fullName.

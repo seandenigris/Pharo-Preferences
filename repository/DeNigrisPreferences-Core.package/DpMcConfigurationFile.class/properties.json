@@ -1,0 +1,14 @@
+{
+	"category" : "DeNigrisPreferences-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DpMcConfigurationFile",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

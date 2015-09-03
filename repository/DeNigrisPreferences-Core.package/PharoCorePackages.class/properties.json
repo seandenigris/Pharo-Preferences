@@ -1,0 +1,14 @@
+{
+	"category" : "DeNigrisPreferences-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "PharoCorePackages",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

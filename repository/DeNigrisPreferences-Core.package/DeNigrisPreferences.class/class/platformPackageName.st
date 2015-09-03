@@ -1,0 +1,4 @@
+utilities
+platformPackageName
+
+	^ 'DeNigrisPreferences-Platform'.
