@@ -1,4 +1,4 @@
 locations
 laptopRepositoryRoot
 
-	^ FileLocator home / 'Squeak/Repositories'.
+	^ FileLocator home / 'Dynabook' / 'Repositories'.
