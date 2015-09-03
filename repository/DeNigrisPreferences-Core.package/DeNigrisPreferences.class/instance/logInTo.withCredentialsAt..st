@@ -1,4 +1,4 @@
-utilities
+repo authentication
 logInTo: urlRegexString withCredentialsAt: headingString
 
 	| relevantRepos |

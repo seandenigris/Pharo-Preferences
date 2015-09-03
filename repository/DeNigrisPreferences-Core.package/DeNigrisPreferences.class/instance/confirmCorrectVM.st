@@ -1,4 +1,4 @@
-utilities
+actions
 confirmCorrectVM
 	"Mac OS X is really weird. No matter how many times you associate an app with a file type, it often silently changes and starts using a different version of Pharo"
 
