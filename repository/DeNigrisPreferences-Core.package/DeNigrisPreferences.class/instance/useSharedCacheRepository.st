@@ -3,6 +3,9 @@ useSharedCacheRepository
 
 	[ MCCacheRepository cacheDirectory: self class sharedCacheFolder ensureCreateDirectory ]
 		on: Error
-		do: [ | shouldLink |
-			shouldLink := UIManager default confirm: 'Maybe the repository symlink has not been created. create it now?'.
-			shouldLink ifTrue: [ self class run: 'ln -s ~/Dropbox/Repositories/ ~/Dynabook/Repositories' ] ]
+		do: [ :err |
+			UIManager default inform: 'Failed setting the shared cache'.
+			self class sharedCacheFolder exists ifFalse: [ 
+			UIManager default inform: 'Attempting to create the repository symlink...'.
+			self class run: 'ln -s ~/Dropbox/Repositories/ ~/Dynabook/Repositories'.
+			self class sharedCacheFolder exists ifTrue: [ err retry ] ] ]
