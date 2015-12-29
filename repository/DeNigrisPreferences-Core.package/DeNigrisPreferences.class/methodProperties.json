@@ -4,6 +4,7 @@
 		"ensureLatest:branch:ifAbsent:" : "SeanDeNigris 7/21/2015 22:35",
 		"ensureLatest:from:branch:ifAbsent:" : "SeanDeNigris 7/21/2015 22:35",
 		"ensureLatestPlatformPackage" : "SeanDeNigris 10/23/2014 16:27",
+		"extractTimestampsFromChunk:" : "SeanDeNigris 12/28/2015 22:13",
 		"initialize" : "SeanDeNigris 9/2/2015 23:40",
 		"instance" : "SeanDeNigris 7/16/2012 11:49",
 		"laptopRepositoryRoot" : "SeanDeNigris 5/18/2015 08:51",
