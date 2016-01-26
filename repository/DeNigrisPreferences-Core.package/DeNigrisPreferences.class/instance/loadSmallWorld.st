@@ -1,9 +1,11 @@
 project loading
 loadSmallWorld
-	NBMacShell
-		run: 'git clone git@github.com:seandenigris/SmallWorld.git ''' , FileLocator imageDirectory fullName , '/SmallWorld'''.
+	| repoFolder |
+	repoFolder := self pharoRepositories / 'SmallWorld'.
+	repoFolder exists ifFalse: [
+		NBMacShell run: 'git clone git@github.com:seandenigris/SmallWorld.git', repoFolder fullName surroundedBySingleQuotes ].
 	Metacello new
-		repository: 'filetree://' , FileLocator imageDirectory fullName , '/SmallWorld/repository';
+		repository: 'filetree://' , (repoFolder / 'repository') fullName;
 		baseline: 'SmallWorld';
 		onConflict: [ :ex | ex allow ];
 		load
