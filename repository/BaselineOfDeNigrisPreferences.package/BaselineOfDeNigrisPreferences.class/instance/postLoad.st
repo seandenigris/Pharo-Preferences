@@ -1,3 +1,3 @@
 post load
 postLoad
-	DeNigrisPreferences  instance loadEachStartup
+	DeNigrisPreferences instance loadEachStartup

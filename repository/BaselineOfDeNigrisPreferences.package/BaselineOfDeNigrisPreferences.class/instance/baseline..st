@@ -5,9 +5,8 @@ baseline: spec
 	spec for: #'common' do: [
 		spec 
 			postLoadDoIt: #postLoad;
-			package: #'MonticelloLogin' with: [ 
-				spec
-					repository: 'http://smalltalkhub.com/mc/SeanDeNigris/MonticelloLogin/main' ];
+			baseline: 'MonticelloLogin' with: [ 
+				spec repository: 'github://seandenigris/Monticello-Login:master/repository' ];
 			package: #'DeNigrisPreferences-Core'  with: [
 				spec
 					includes: #'DeNigrisPreferences-Platform';
