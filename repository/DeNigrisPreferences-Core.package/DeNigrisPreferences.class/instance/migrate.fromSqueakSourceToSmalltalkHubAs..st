@@ -5,7 +5,7 @@ migrate: oldProjectName fromSqueakSourceToSmalltalkHubAs: newProjectName
 	
 	self error: 'Moved to McProjectMigrate in Playground'.
 	
-	DpMcConfigurationFile new credentialsForSmalltalkHubDuring: [ :username :password |
+	MlConfigurationFile new credentialsForSmalltalkHubDuring: [ :username :password |
 		source := MCHttpRepository location: 'http://www.squeaksource.com/', oldProjectName.
 		destination := MCSmalltalkhubRepository
 		    owner: username

@@ -1,3 +1,3 @@
 private-loading
 setMcConfigurationFolder
-	DpMcConfigurationFile folder: self class preferencesFolder
+	MlConfigurationFile folder: self class preferencesFolder
