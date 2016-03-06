@@ -6,7 +6,7 @@ addMyMcRepos
 	urls do: [ :url | | repo |
 		repo := MCHttpRepository location: url asString.
 		MCRepositoryGroup default addRepository: repo ].
-	self
+	MlFrontDesk new
 		logInToSqueakSource;
 		logInToSqueakSource3;
 		logInToSmalltalkHub.
