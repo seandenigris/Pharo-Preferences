@@ -1,4 +1,0 @@
-*DeNigrisPreferences-Platform
-startupLoader
-
-	^ StartupPreferencesLoader
