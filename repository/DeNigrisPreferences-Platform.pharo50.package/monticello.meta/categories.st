@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'DeNigrisPreferences-Platform.pharo50'!
+SystemOrganization addCategory: #'DeNigrisPreferences-Platform'!

@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"startupLoader" : "SeanDeNigris 4/21/2015 21:51" },
+	"instance" : {
+		"addMyMetaRepoToConfigurationBrowser" : "SeanDeNigris 8/6/2015 21:22",
+		"customizeCompletion" : "SeanDeNigris 4/3/2013 16:54",
+		"daytimeTheme" : "SeanDeNigris 4/29/2015 22:06",
+		"debuggerClass" : "SeanDeNigris 11/5/2013 13:06",
+		"enableShortcutHelp" : "SeanDeNigris 1/26/2016 10:25",
+		"nighttimeTheme" : "SeanDeNigris 4/29/2015 22:06",
+		"refreshPackageNamed:" : "SeanDeNigris 1/23/2014 23:08",
+		"setFonts" : "SeanDeNigris 4/29/2015 22:08",
+		"updateTheme" : "SeanDeNigris 6/18/2016 09:50" } }
