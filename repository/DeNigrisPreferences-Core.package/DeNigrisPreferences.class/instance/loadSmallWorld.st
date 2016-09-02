@@ -3,7 +3,7 @@ loadSmallWorld
 	| repoFolder |
 	repoFolder := self pharoRepositories / 'SmallWorld'.
 	repoFolder exists ifFalse: [
-		NBMacShell run: 'git clone git@github.com:seandenigris/SmallWorld.git', repoFolder fullName surroundedBySingleQuotes ].
+		self class basicRun: 'git clone git@github.com:seandenigris/SmallWorld.git', repoFolder fullName surroundedBySingleQuotes ].
 	Metacello new
 		repository: 'filetree://' , (repoFolder / 'repository') fullName;
 		baseline: 'SmallWorld';
