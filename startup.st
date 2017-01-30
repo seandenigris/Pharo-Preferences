@@ -1,6 +1,6 @@
 | loader |
 
-“StartupLoader deprecated in Pharo 5”
+"StartupLoader deprecated in Pharo 5"
 loader := Smalltalk globals at: #StartupLoader ifAbsent: [ #StartupPreferencesLoader asClass ].
 
 loader default executeAtomicItems: {
