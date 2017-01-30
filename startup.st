@@ -5,7 +5,7 @@ loader := Smalltalk globals at: #StartupLoader ifAbsent: [ #StartupPreferencesLo
 
 loader default executeAtomicItems: {
         StartupAction name: 'Load Preferences Project' code: [
-		repoFolder := FileLocator home / 'Dynabook' / 'Repositories' / 'DeNigrisPreferences'.
+		repoFolder := FileLocator home / 'Dynabook' / 'Repositories' / 'DeNigris Preferences'.
 		repoFolder exists
 			ifFalse: [ LibC system: 'git clone git@github.com:seandenigris/PharoPreferences.git ', repoFolder fullName surroundedBySingleQuotes ].
                 Metacello new                       
