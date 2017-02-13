@@ -10,4 +10,4 @@ confirmCorrectVM
 		'/Volumes/SEAN/Smalltalk/pharo-vm/Pharo.app/Contents/MacOS/Pharo'
 		':\Smalltalk\pharo-vm\Win (92)\Pharo.exe').
 	(normalVmLocations anySatisfy: [ :e | Smalltalk vm vmFileName includesSubstring: e ])
-		ifFalse: [ self logDeferred: 'Different VM: ', Smalltalk vm vmFileName ].
+		ifFalse: [ self log: 'Different VM: ', Smalltalk vm vmFileName ].

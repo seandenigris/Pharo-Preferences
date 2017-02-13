@@ -1,7 +1,7 @@
 private-loading
 basicLoadEachStartup
 
-	self logDeferred: 'Loading "each startup" script...'.
+	self log: 'Loading "each startup" script...'.
 
 	Author fullName: 'SeanDeNigris'.
 	
