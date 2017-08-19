@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"defaultBounds" : "SeanDeNigris 10/2/2014 18:53",
-		"showModally" : "SeanDeNigris 10/2/2014 18:27" } }
+		"showModally" : "SeanDeNigris 10/2/2014 18:27",
+		"defaultBounds" : "SeanDeNigris 10/2/2014 18:53"
+	},
+	"class" : { }
+}

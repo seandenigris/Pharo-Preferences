@@ -5,7 +5,7 @@ loadOnce
 	self closeWelcomeWindow.
 	self setFonts.
 	self configureFormatter.
-	self customizeLauncherImageFolder.
+	self customizeLauncher.
 	self customizeCompletion.
 	self debuggerClass alwaysOpenFullDebugger: true.
 	WorldState easySelectingWorld: true.
