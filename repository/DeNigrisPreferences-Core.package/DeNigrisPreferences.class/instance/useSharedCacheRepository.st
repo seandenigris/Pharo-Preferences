@@ -2,6 +2,7 @@ actions
 useSharedCacheRepository
 	
 	| dropboxRepoFolder |
+	MCCacheRepository cacheDirectory resolve = self class sharedCacheFolder resolve ifTrue: [ ^ self ].
 	dropboxRepoFolder := FileLocator home / 'Dropbox (Personal)' / 'Repositories'.
 	dropboxRepoFolder exists
 		ifTrue: [ 
