@@ -2,6 +2,7 @@ loading
 loadOnce
 
 	self log: 'Loading one-time startup script...'.
+	self configureIceberg.
 	self closeWelcomeWindow.
 	self setFonts.
 	self configureFormatter.
