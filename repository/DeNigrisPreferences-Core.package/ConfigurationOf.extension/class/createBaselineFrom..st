@@ -1,7 +1,7 @@
 *DeNigrisPreferences-Core
 createBaselineFrom: selector
 
-	| projectName baselineName baseline methodTree commonBlockBody repoSetter |
+	| projectName baselineName baseline methodTree commonBlockBody |
 	
 	"Create new class"
 	projectName := self name allButFirst: self superclass name size.
@@ -16,8 +16,9 @@ createBaselineFrom: selector
 	methodTree selector: #baseline:.
 	methodTree pragmas at: 1 put: (RBPragmaNode selector: #baseline arguments: #()).
 	commonBlockBody := methodTree statements first arguments last body.
-	repoSetter := commonBlockBody statements detect: [ :e | e selector = #repository: ].
-	commonBlockBody removeNode: repoSetter.
+	commonBlockBody statements
+		detect: [ :e | e selector = #repository: ]
+		ifFound: [ :repoSetter | commonBlockBody removeNode: repoSetter ].
 	
 	"Compile baseline method"
 	baseline compile: methodTree newSource classified: 'baseline'
