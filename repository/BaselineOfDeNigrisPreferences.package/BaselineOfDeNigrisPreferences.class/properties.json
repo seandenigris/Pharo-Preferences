@@ -1,14 +1,11 @@
 {
-	"category" : "BaselineOfDeNigrisPreferences",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "BaselineOfDeNigrisPreferences",
-	"pools" : [
-		 ],
 	"super" : "BaselineOf",
-	"type" : "normal" }
+	"category" : "BaselineOfDeNigrisPreferences",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfDeNigrisPreferences",
+	"type" : "normal"
+}

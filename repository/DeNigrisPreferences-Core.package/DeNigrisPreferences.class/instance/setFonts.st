@@ -1,3 +1,3 @@
-*DeNigrisPreferences-Platform
+actions
 setFonts
 	^ SourceCodeFonts setSourceCodeFonts: SourceCodeFonts sizeLarge.

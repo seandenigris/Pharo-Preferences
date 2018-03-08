@@ -1,4 +1,4 @@
-*DeNigrisPreferences-Platform
+*DeNigrisPreferences-Platform-Pharo5
 dateMethodLastSubmitted
 	"Answer a Date object indicating when a method was last submitted.  If there is no date stamp, return nil"
 	"(CompiledMethod compiledMethodAt: #dateMethodLastSubmitted) dateMethodLastSubmitted"

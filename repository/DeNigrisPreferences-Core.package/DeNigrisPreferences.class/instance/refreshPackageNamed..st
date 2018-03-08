@@ -1,4 +1,4 @@
-*DeNigrisPreferences-Platform
+actions
 refreshPackageNamed: aString
 
 	| package |

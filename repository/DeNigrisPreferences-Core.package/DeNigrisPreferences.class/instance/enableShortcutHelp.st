@@ -1,3 +1,3 @@
-*DeNigrisPreferences-Platform
+actions
 enableShortcutHelp
 	ShortcutReminder enabled: true.
