@@ -28,9 +28,9 @@ baseline: spec
 					spec includes: #'DeNigrisPreferences-Platform' ];
 			package: #'DeNigrisPreferences-Platform' with: 'DeNigrisPreferences-Platform.pharo40' ].
 
-	spec for: #'pharo5.x' do: [
+	spec for: #(#'pharo5.x' #'pharo6.x') do: [
 		spec
 			package: #'DeNigrisPreferences-Core'  with: [
-					spec includes: #'DeNigrisPreferences-Platform-Pharo5' ];
-			package: #'DeNigrisPreferences-Platform-Pharo5' with: [
+					spec includes: #'DeNigrisPreferences-Platform-Pharo6' ];
+			package: #'DeNigrisPreferences-Platform-Pharo6' with: [
 				spec requires: #'DeNigrisPreferences-Core' ] ].
