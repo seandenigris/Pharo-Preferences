@@ -14,6 +14,6 @@ basicLoadEachStartup
 "	self syncSharedCaches."
 	self setMcConfigurationFolder.
 
-	self hasLoadOnceChanged  ifTrue: [ 
-		self log: 'Latest version of load-once script has never been run...'.
-		self loadOnce ].
+	self hasLoadOnceChanged ifFalse: [ ^ self ].
+	self log: 'Latest version of load-once script has never been run...'.
+	self loadOnce

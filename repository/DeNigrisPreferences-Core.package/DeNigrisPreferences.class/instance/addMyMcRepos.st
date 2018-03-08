@@ -10,5 +10,3 @@ addMyMcRepos
 		logInToSqueakSource;
 		logInToSqueakSource3;
 		logInToSmalltalkHub.
-	
-	self addMyMetaRepoToConfigurationBrowser.
