@@ -8,7 +8,7 @@ loadOnce
 	self configureFormatter.
 	self customizeLauncher.
 	self customizeCompletion.
-	self debuggerClass alwaysOpenFullDebugger: true.
+	Smalltalk tools debugger alwaysOpenFullDebugger: true.
 	WorldState easySelectingWorld: true.
 	Morph cycleHalosBothDirections: true.
 	self addMyMcRepos.
