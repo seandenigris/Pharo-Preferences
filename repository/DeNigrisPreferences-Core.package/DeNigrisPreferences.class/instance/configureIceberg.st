@@ -1,6 +1,6 @@
 actions
 configureIceberg
 	Iceberg enableMetacelloIntegration: true.
-	IceRepository
+	IceLibgitRepository
 		shareRepositoriesBetweenImages: true;
 		sharedRepositoriesLocation: self class localRepositoryRoot
