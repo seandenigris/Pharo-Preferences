@@ -1,0 +1,14 @@
+{
+	"category" : "DeNigrisPreferences-Platform-Pharo5",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "IceLibgitRepository",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

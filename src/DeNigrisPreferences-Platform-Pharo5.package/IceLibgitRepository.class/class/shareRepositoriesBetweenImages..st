@@ -1,0 +1,2 @@
+compatibility
+shareRepositoriesBetweenImages: aBoolean
