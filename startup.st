@@ -9,7 +9,7 @@ loader default executeAtomicItems: {
 		repoFolder exists
 			ifFalse: [ LibC system: 'git clone git@github.com:seandenigris/Pharo-Preferences.git ', repoFolder fullName surroundedBySingleQuotes ].
                 Metacello new                       
-			repository: 'filetree://', (repoFolder / 'repository') fullName;
+			repository: 'filetree://', (repoFolder / 'src') fullName;
                         baseline: 'DeNigrisPreferences';
                         onConflict: [ :ex | ex allow ];
                         load.
