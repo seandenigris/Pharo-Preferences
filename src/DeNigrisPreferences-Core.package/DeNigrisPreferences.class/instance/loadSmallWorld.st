@@ -1,11 +1,7 @@
 project loading
 loadSmallWorld
-	| repoFolder |
-	repoFolder := self pharoRepositories / 'seandenigris' / 'Small-World'.
-	repoFolder exists ifFalse: [
-		self class basicRun: 'git clone git@github.com:seandenigris/Small-World.git', repoFolder fullName surroundedBySingleQuotes ].
 	Metacello new
-		repository: 'filetree://' , (repoFolder / 'repository') fullName;
-		baseline: 'SmallWorld';
-		onConflict: [ :ex | ex allow ];
+		repository: 'github://seandenigris/Small-World:master/src';
+		baseline: 'SmallWorld';"
+		onConflict: [ :ex | ex allow ];"
 		load
