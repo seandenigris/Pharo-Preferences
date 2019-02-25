@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #'DeNigrisPreferences-Core'!
-SystemOrganization addCategory: 'DeNigrisPreferences-Core-Tests'!
+SystemOrganization addCategory: #'DeNigrisPreferences-Core-Tests'!
