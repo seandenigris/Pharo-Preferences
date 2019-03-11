@@ -1,3 +1,0 @@
-post load
-postLoad
-	DeNigrisPreferences instance loadEachStartup

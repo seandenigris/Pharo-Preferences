@@ -1,3 +1,0 @@
-private-loading
-setMcConfigurationFolder
-	MlConfigurationFile folder: self class preferencesFolder
