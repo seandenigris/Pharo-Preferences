@@ -362,6 +362,25 @@ DeNigrisPreferences >> enableShortcutHelp [
 	ShortcutReminder enabled: true.
 ]
 
+{ #category : #utilities }
+DeNigrisPreferences >> fixIcebergRepoLocations [
+	"E.g. after an image is moved or renamed, its local Iceberg repos become broken because the locations are stored as static FileReferences instead of dynamic FileLocations following the image around. Limitation: assumes all images are stored in flat folders under root"
+	| imageRoot repos |
+	imageRoot := FileLocator home / 'Dynabook' / 'Working Images'.
+	repos := IceLibgitRepository allSubInstances
+		select: [ :e | 
+			e location isNotNil
+				and: [ (FileLocator imageDirectory contains: e location) not
+						and: [ imageRoot contains: e location ] ] ].
+	repos
+		do: [ :e | 
+			| oldPath newPath fixedLocation |
+			oldPath := e location relativeTo: imageRoot.
+			newPath := RelativePath withAll: oldPath segments allButFirst.
+			fixedLocation := FileLocator imageDirectory withPath: newPath.
+			e location: fixedLocation ]
+]
+
 { #category : #fixes }
 DeNigrisPreferences >> fixIssue5656 [
 	"Issue 5656: Large fonts make tools slow 
