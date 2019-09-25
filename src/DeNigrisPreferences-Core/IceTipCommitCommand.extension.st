@@ -3,10 +3,6 @@ Extension { #name : #IceTipCommitCommand }
 { #category : #'*DeNigrisPreferences-Core' }
 IceTipCommitCommand >> execute [
 
-	self repositoryModel realObject packages do: [ :p |
-		| rp |
-		rp := RPackageSet named: p packageName.
-		rp instVarNamed: #definedClasses put: nil.
-		rp instVarNamed: #methods put: nil. ].
+	RPackageSet resetCacheFor: self repositoryModel realObject packages.
 	(IceTipCommitBrowser on: self repositoryModel) openWithSpec
 ]
