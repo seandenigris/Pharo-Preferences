@@ -12,6 +12,6 @@ RPackageSet class >> resetCacheFor: packageCollection [
 { #category : #'*DeNigrisPreferences-Core' }
 RPackageSet class >> resetCacheForBeginsWith: aString [
 	| packages |
-	packages := RPackageOrganizer default packages select: [ :e | e beginsWith: aString ].
+	packages := RPackageOrganizer default packages select: [ :e | e packageName beginsWith: aString ].
 	self resetCacheFor: packages
 ]
