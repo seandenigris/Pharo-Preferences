@@ -81,11 +81,11 @@ DeNigrisPreferences class >> log: aString [
 DeNigrisPreferences class >> menuCommandOn: aBuilder [ 
 	<worldMenu> 
 	
-	(aBuilder item: #Finder)
-		action: [ Finder open ];
-		parent: #MostUsedTools;
-		help: 'Looking for something ?';
-		icon: Finder icon.
+	(aBuilder item: #'My Pharo Wiki')
+		action: [ "Smalltalk tools" WebBrowser openOn: 'https://github.com/seandenigris/pharo/wiki' ];
+		"parent: #MostUsedTools;"
+		"help: 'Looking for something ?';"
+		icon: Smalltalk ui icons help.
 
 	(aBuilder item: #Bootstraps)
 		with: [
