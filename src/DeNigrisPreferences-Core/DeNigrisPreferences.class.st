@@ -430,12 +430,10 @@ DeNigrisPreferences >> isLauncherImage [
 { #category : #'project loading' }
 DeNigrisPreferences >> loadDevEnhancements [
 
-	Gofer it
-		squeaksource3: 'PharoSpd';
-		package: 'ConfigurationOfBatcave';
-		load.
-		
-	(Smalltalk at: #ConfigurationOfBatcave) project bleedingEdge load.
+	Metacello new
+		baseline: 'Batcave';
+		repository: 'github://seandenigris/Pharo-Enhancements';
+		load
 ]
 
 { #category : #loading }
