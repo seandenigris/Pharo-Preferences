@@ -601,7 +601,7 @@ DeNigrisPreferences >> startUp: newSession [
 
 	newSession ifFalse: [ ^ self ].
 	self loadEachStartup.
-	self class startupLoader default errors ifNotEmpty: [ :errors | errors explore ].
+	self class startupLoader default errors ifNotEmpty: #explore.
 ]
 
 { #category : #utilities }
