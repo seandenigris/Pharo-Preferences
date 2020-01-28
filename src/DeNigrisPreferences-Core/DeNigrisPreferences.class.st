@@ -11,7 +11,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : 'DeNigrisPreferences-Core'
+	#category : #'DeNigrisPreferences-Core'
 }
 
 { #category : #utilities }
@@ -460,7 +460,6 @@ DeNigrisPreferences >> loadOnce [
 	self configureFormatter.
 	self customizeLauncher.
 	self customizeCompletion.
-	Smalltalk tools debugger alwaysOpenFullDebugger: true.
 	WorldState easySelectingWorld: true.
 	Morph cycleHalosBothDirections: true.
 	self addMyMcRepos.
