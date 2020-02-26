@@ -1,12 +1,17 @@
 Extension { #name : #RPackageSet }
 
 { #category : #'*DeNigrisPreferences-Core' }
+RPackageSet >> resetCache [
+	self instVarNamed: #definedClasses put: nil.
+	self instVarNamed: #methods put: nil
+]
+
+{ #category : #'*DeNigrisPreferences-Core' }
 RPackageSet class >> resetCacheFor: packageCollection [
 	packageCollection do: [ :e | 
 		| ps |
 		ps := RPackageSet named: e packageName.
-		ps instVarNamed: #definedClasses put: nil.
-		ps instVarNamed: #methods put: nil ].
+		ps resetCache ].
 ]
 
 { #category : #'*DeNigrisPreferences-Core' }

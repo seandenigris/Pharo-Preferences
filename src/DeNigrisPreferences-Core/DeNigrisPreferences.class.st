@@ -11,7 +11,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : #'DeNigrisPreferences-Core'
+	#category : 'DeNigrisPreferences-Core'
 }
 
 { #category : #utilities }
