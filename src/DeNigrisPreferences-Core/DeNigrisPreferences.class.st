@@ -49,6 +49,14 @@ DeNigrisPreferences class >> laptopRepositoryRoot [
 	^ FileLocator home / 'Dynabook' / 'Repositories'.
 ]
 
+{ #category : #Launcher }
+DeNigrisPreferences class >> launcherAddUserTemplates [
+	<script>
+	"Needs to be a script because will need to be rerun after sources refreshed"
+	
+	PharoLauncher addTemplateNamed: 'GToolkit' atUrl: 'https://github.com/feenkcom/gtoolkit/releases/latest/download/GT.zip' asUrl inGroupNamed: 'Sean'.
+]
+
 { #category : #utilities }
 DeNigrisPreferences class >> linkPreferenceSupportFiles [
 	<script>
@@ -278,6 +286,20 @@ DeNigrisPreferences >> closeWelcomeWindow [
 ]
 
 { #category : #actions }
+DeNigrisPreferences >> configureCompletion [
+
+	NECPreferences
+		enabled: true;
+		caseSensitive: true;
+		expandPrefixes: true;
+		useEnterToAccept: false;
+		smartCharacters: true;
+		smartCharactersWithDoubleSpace: '[]{}';
+		spaceAfterCompletion: false;
+		popupAutomaticDelay: 100.
+]
+
+{ #category : #actions }
 DeNigrisPreferences >> configureFormatter [
 	"See RBConfigurableFormatter class-side settings"
 ]
@@ -290,6 +312,15 @@ DeNigrisPreferences >> configureIceberg [
 	"IceLibgitRepository
 		shareRepositoriesBetweenImages: true;
 		sharedRepositoriesLocation: self class localRepositoryRoot"
+]
+
+{ #category : #Launcher }
+DeNigrisPreferences >> configureLauncher [
+
+	self setLauncherImageDirectory.
+	self class launcherAddUserTemplates.
+	PhLLaunchImageCommand warnOnArchMismatch: false. "Warns about 32-bit lib dependency on Linux"
+	self loadSmallWorld.
 ]
 
 { #category : #actions }
@@ -305,30 +336,6 @@ DeNigrisPreferences >> confirmCorrectVM [
 		':\Smalltalk\pharo-vm\Win (92)\Pharo.exe').
 	(normalVmLocations anySatisfy: [ :e | Smalltalk vm vmFileName includesSubstring: e ])
 		ifFalse: [ self log: 'Different VM: ', Smalltalk vm vmFileName ].
-]
-
-{ #category : #actions }
-DeNigrisPreferences >> customizeCompletion [
-
-	NECPreferences
-		enabled: true;
-		caseSensitive: true;
-		expandPrefixes: true;
-		useEnterToAccept: false;
-		smartCharacters: true;
-		smartCharactersWithDoubleSpace: '[]{}';
-		spaceAfterCompletion: false;
-		popupAutomaticDelay: 100.
-]
-
-{ #category : #Launcher }
-DeNigrisPreferences >> customizeLauncher [
-
-	self isLauncherImage ifFalse: [ ^ self ].
-	
-	self setLauncherImageDirectory.
-	PhLLaunchImageCommand warnOnArchMismatch: false. "Warns about 322-bit lib dependency on Linux"
-	self loadSmallWorld.
 ]
 
 { #category : #accessing }
@@ -481,9 +488,8 @@ DeNigrisPreferences >> loadSetup [
 { #category : #'project loading' }
 DeNigrisPreferences >> loadSmallWorld [
 	Metacello new
-		repository: 'github://seandenigris/Small-World:master/repository';
-		baseline: 'SmallWorld';"
-		onConflict: [ :ex | ex allow ];"
+		repository: 'github://seandenigris/Small-World';
+		baseline: 'SmallWorld';
 		load
 ]
 
