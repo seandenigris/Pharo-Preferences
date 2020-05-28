@@ -11,7 +11,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : 'DeNigrisPreferences-Core'
+	#category : #'DeNigrisPreferences-Core'
 }
 
 { #category : #utilities }
@@ -465,8 +465,8 @@ DeNigrisPreferences >> loadOnce [
 	self closeWelcomeWindow.
 	self setFonts.
 	self configureFormatter.
-	self customizeLauncher.
-	self customizeCompletion.
+	self configureLauncher.
+	self configureCompletion.
 	WorldState easySelectingWorld: true.
 	Morph cycleHalosBothDirections: true.
 	self addMyMcRepos.
