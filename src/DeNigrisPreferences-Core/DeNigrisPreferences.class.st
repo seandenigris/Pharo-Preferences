@@ -465,7 +465,7 @@ DeNigrisPreferences >> loadOnce [
 	self closeWelcomeWindow.
 	self setFonts.
 	self configureFormatter.
-	self configureLauncher.
+	self isLauncherImage ifTrue: [ self configureLauncher ].
 	self configureCompletion.
 	WorldState easySelectingWorld: true.
 	Morph cycleHalosBothDirections: true.
