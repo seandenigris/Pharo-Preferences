@@ -295,8 +295,8 @@ DeNigrisPreferences >> configureCompletion [
 		useEnterToAccept: false;
 		smartCharacters: true;
 		smartCharactersWithDoubleSpace: '[]{}';
-		spaceAfterCompletion: false;
 		popupAutomaticDelay: 100.
+	NECEntry spaceAfterCompletion: false.
 ]
 
 { #category : #actions }
