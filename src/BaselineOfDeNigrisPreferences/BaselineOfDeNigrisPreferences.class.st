@@ -43,6 +43,7 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 		
 	spec for: #(#'pharo8.x') do: [
 		spec
+			package: #'DeNigrisPreferences-Pharo8';
 			package: #'DeNigrisPreferences-Core'  with: [
 					spec requires: #'DeNigrisPreferences-Pharo8' ] ].
 ]
