@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfDeNigrisPreferences,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfDeNigrisPreferences'
+	#category : #BaselineOfDeNigrisPreferences
 }
 
 { #category : #baselines }
@@ -12,7 +12,7 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 		spec 
 			postLoadDoIt: #postLoad;
 			baseline: 'MonticelloLogin' with: [ 
-				spec repository: 'github://seandenigris/Monticello-Login:master/repository' ];
+				spec repository: 'github://seandenigris/Monticello-Login/repository' ];
 			package: #'DeNigrisPreferences-Core'  with: [
 				spec requires: #'MonticelloLogin'. ] ].
 
@@ -40,6 +40,11 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 					spec includes: #'DeNigrisPreferences-Platform-Pharo6' ];
 			package: #'DeNigrisPreferences-Platform-Pharo6' with: [
 				spec requires: #'DeNigrisPreferences-Core' ] ].
+		
+	spec for: #(#'pharo8.x') do: [
+		spec
+			package: #'DeNigrisPreferences-Core'  with: [
+					spec requires: #'DeNigrisPreferences-Pharo8' ] ].
 ]
 
 { #category : #'post load' }
