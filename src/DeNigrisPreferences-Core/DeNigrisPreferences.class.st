@@ -109,6 +109,70 @@ DeNigrisPreferences class >> menuCommandOn: aBuilder [
 				action: [ self instance informImageFolder ].
 ]
 
+{ #category : #accessing }
+DeNigrisPreferences class >> pillarBooklet [
+	<gtExample> "Not an example, but want to inspect result when clicked in tools"
+
+	^ FileLocator home / 'Dynabook'/'Repositories'/'seandenigris'/'Booklet-PublishingAPillarBooklet' / 'book.pillar'
+]
+
+{ #category : #accessing }
+DeNigrisPreferences class >> pillarCheatsheet [
+	<gtExample> "Not an example, but want to inspect result when clicked in tools"
+	^ GtDocumenter forText: '!Cheatsheet
+"Show markup" to see syntax
+!!Headings
+!!References and Links
+@anchorDefinition
+*@anchorReference*
+*optionalAlias>anchorReference*
+*AnotherFile.pillar@anchorReference*
+*Web link to Pharo>https://pharo.org*
+*Email to join the Pharo Consortium>board@pharo.org*
+!!!Lists
+- Bulleted
+# Numbered
+#-Nested
+;Definition.
+:term
+!!!Comments
+% lines that start with percent sign will not be rendered
+!!!Escaping
+\!Precede special characters with backslash
+!!!Formatting
+""bold with 2 double quotes""
+''italic with 2 single quotes''
+==monospaced==
+--strikethrough--
+@@subscript@@
+^^superscript^^
+__underline with 2 underscores__
+!!!Pictures
++caption>file://filename|parame-
+ters+
+!!!Tables
+
+|!Country |!Capital
+|France | Paris
+|Belgium | Brussels
+!!!Preformatted
+= Preformatted text
+!!!Code Block
+[[[label=foobar|caption=My code block that works|language=smalltalk|lineNumber=true
+1+1
+]]]
+Highlight language options: bash, css, html, http, json, javascript, pillar, sql, ston, shellcommands, smalltalk or "no language"
+!!!Annotated Paragraphs
+@@note this is a note
+@@todo this is a todo
+!!!Raw
+{{{html:
+       (1+sqrt(2)) / 2
+}}}
+!!!Extensions/Plugins
+${tag:parameter=value|parameter2=value2}$'
+]
+
 { #category : #locations }
 DeNigrisPreferences class >> preferencesFolder [
 
