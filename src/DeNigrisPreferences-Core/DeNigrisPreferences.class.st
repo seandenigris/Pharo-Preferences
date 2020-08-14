@@ -368,6 +368,11 @@ DeNigrisPreferences >> configureFormatter [
 	"See RBConfigurableFormatter class-side settings"
 ]
 
+{ #category : #GT }
+DeNigrisPreferences >> configureGT [
+	GtPlaygroundToolRegistryAdaptor unregister.
+]
+
 { #category : #actions }
 DeNigrisPreferences >> configureIceberg [
 	Iceberg enableMetacelloIntegration: true.
@@ -492,6 +497,11 @@ DeNigrisPreferences >> installCalypso [
 	#ClyBrowser asClass beAllDefault
 ]
 
+{ #category : #GT }
+DeNigrisPreferences >> isGTImage [
+	^ Smalltalk globals hasClassNamed: #GtPlaygroundToolRegistryAdaptor
+]
+
 { #category : #Launcher }
 DeNigrisPreferences >> isLauncherImage [
 	
@@ -530,6 +540,7 @@ DeNigrisPreferences >> loadOnce [
 	self setFonts.
 	self configureFormatter.
 	self isLauncherImage ifTrue: [ self configureLauncher ].
+	self isGTImage ifTrue: [ self configureGT ].
 	self configureCompletion.
 	WorldState easySelectingWorld: true.
 	Morph cycleHalosBothDirections: true.
