@@ -1,3 +1,9 @@
+"
+Things that need to be in ''every'' image I develop in.
+!Features
+!!Metacello
+- For GToolkit-specific code loading, make a ==GToolkit== platform attribute available by sending ${method:BaselineOf class>>#beGToolkitAware|label='#beGToolkitAware'}$ to your baseline.
+"
 Class {
 	#name : #BaselineOfDeNigrisPreferences,
 	#superclass : #BaselineOf,

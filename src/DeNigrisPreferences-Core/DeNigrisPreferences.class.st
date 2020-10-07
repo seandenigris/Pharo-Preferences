@@ -1,5 +1,5 @@
 "
-DeNigrisPreferences new syncSharedCaches.
+See ${class:BaselineOfDeNigrisPreferences}$ for main project documentation.
 "
 Class {
 	#name : #DeNigrisPreferences,
