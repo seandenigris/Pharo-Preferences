@@ -499,7 +499,7 @@ DeNigrisPreferences >> installCalypso [
 
 { #category : #GT }
 DeNigrisPreferences >> isGTImage [
-	^ Smalltalk globals hasClassNamed: #GtPlaygroundToolRegistryAdaptor
+	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'GToolkit-' ]
 ]
 
 { #category : #Launcher }
