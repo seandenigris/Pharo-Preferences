@@ -54,7 +54,7 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 					spec requires: #'DeNigrisPreferences-Pharo8' ] ].
 					
 	spec for: #'Lepiter' do: [
-		spec baseline: 'Lepiter-DeNigris' with: [ 
+		spec baseline: 'LepiterDeNigris' with: [ 
 			spec repository: 'github://seandenigris/Lepiter-DeNigris:main' ].
 		spec
 			package: #'DeNigrisPreferences-Core' with: [ spec includes: #'Lepiter-DeNigris' ] ].
