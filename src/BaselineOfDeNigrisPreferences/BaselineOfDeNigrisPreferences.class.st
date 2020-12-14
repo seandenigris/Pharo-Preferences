@@ -53,6 +53,9 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 			package: #'DeNigrisPreferences-Core' with: [
 					spec requires: #'DeNigrisPreferences-Pharo8' ] ].
 					
+	spec for: #'GToolkit' do: [
+		spec package: #'DeNigrisPreferences-GToolkit' with: [ spec requires: #'DeNigrisPreferences-Core' ] ].
+	
 	"spec for: #'Lepiter' do: [
 		spec baseline: 'LepiterDeNigris' with: [ 
 			spec repository: 'github://seandenigris/Lepiter-DeNigris:main' ].
@@ -62,9 +65,14 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 
 { #category : #accessing }
 BaselineOfDeNigrisPreferences >> customProjectAttributes [
-	^ self isLepiterImage
-			ifFalse: [ #() ]
-			ifTrue: [ #(Lepiter) ]
+	^ OrderedCollection streamContents: [ :col |
+		self isGTImage ifTrue: [ col nextPut: #GToolkit ].
+		self isLepiterImage ifTrue: [ col nextPut: #Lepiter ]. ]
+]
+
+{ #category : #testing }
+BaselineOfDeNigrisPreferences >> isGTImage [
+	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'GToolkit-' ]
 ]
 
 { #category : #testing }
