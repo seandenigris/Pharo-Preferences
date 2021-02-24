@@ -10,3 +10,33 @@ BaselineOf class >> beGToolkitAware [
 			ifTrue: [ #(GToolkit) ]' classified: 'accessing'.
 	
 ]
+
+{ #category : #'*DeNigrisPreferences-Core' }
+BaselineOf class >> isGTImage [
+	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'GToolkit-' ]
+]
+
+{ #category : #'*DeNigrisPreferences-Core' }
+BaselineOf class >> setUpGToolkit [
+	
+	"Old-style GT"
+	GTPlayBook
+		cacheDirectory: (self dataFolder / 'play-cache') ensureCreateDirectory;
+		stashDirectory: (self dataFolder / 'play-stash') ensureCreateDirectory.
+
+	"Gtoolkit"
+	Smalltalk globals
+		at: #XdPlaygroundSettings
+		ifPresent: [ :cls | cls directory: (self dataFolder / 'xdocs') ensureCreateDirectory ].
+]
+
+{ #category : #'*DeNigrisPreferences-Core' }
+BaselineOf class >> setUpIDE [
+	"To use, a subclass should define class-side #dataFolder returning anAbstractFileReference"
+	
+	self isGTImage ifTrue: [ self setUpGToolkit ].
+
+	"Epicea"
+	OmSessionStore defaultBaseLocator: self dataFolder / 'ombu-sessions'.
+	EpMonitor restart
+]
