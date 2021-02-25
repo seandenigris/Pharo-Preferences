@@ -59,12 +59,6 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 				repository: 'github://seandenigris/activepapers-pharo:denigris';
 				loads: #('ActivePapers-Wiki') ].
 		spec package: #'DeNigrisPreferences-GToolkit' with: [ spec requires: #(#'DeNigrisPreferences-Core' #ActivePapers) ] ].
-	
-	"spec for: #'Lepiter' do: [
-		spec baseline: 'LepiterDeNigris' with: [ 
-			spec repository: 'github://seandenigris/Lepiter-DeNigris:main' ].
-		spec
-			package: #'DeNigrisPreferences-Core' with: [ spec includes: #'LepiterDeNigris' ] ]."
 ]
 
 { #category : #accessing }
@@ -81,6 +75,7 @@ BaselineOfDeNigrisPreferences >> isGTImage [
 
 { #category : #testing }
 BaselineOfDeNigrisPreferences >> isLepiterImage [
+	"Lepiter has its own startup script mechanism, which ensures scripts get run before the DB is loaded; thus it's unlikely we will do anything for Lepiter here"
 	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'Lepiter-' ]
 ]
 
