@@ -19,15 +19,20 @@ BaselineOf class >> isGTImage [
 { #category : #'*DeNigrisPreferences-Core' }
 BaselineOf class >> setUpGToolkit [
 	
-	"Old-style GT"
+	"Old-style GT locations"
+	| projectName |
 	GTPlayBook
 		cacheDirectory: (self dataFolder / 'play-cache') ensureCreateDirectory;
 		stashDirectory: (self dataFolder / 'play-stash') ensureCreateDirectory.
 
-	"Gtoolkit"
+	"Gtoolkit locations"
 	Smalltalk globals
 		at: #XdPlaygroundSettings
 		ifPresent: [ :cls | cls directory: (self dataFolder / 'xdocs') ensureCreateDirectory ].
+		
+	"Window Title(s)"
+	projectName := self name allButFirst: 'BaselineOf' size.
+	GlutinWindowsRegistry default windowsDetailedTitleWithPrefix: projectName andSuffix: GlutinWindowsRegistry mainWindowTag
 ]
 
 { #category : #'*DeNigrisPreferences-Core' }
