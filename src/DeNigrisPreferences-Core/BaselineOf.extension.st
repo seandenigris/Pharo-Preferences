@@ -32,7 +32,7 @@ BaselineOf class >> setUpGToolkit [
 		
 	"Window Title(s)"
 	projectName := self name allButFirst: 'BaselineOf' size.
-	GlutinWindowsRegistry default windowsDetailedTitleWithPrefix: projectName andSuffix: GlutinWindowsRegistry mainWindowTag
+	GlutinWindowsRegistry default windowsDetailedTitleWithPrefix: projectName andSuffix: ''
 ]
 
 { #category : #'*DeNigrisPreferences-Core' }
