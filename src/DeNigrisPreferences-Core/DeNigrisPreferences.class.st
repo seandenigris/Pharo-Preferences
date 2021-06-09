@@ -246,12 +246,6 @@ DeNigrisPreferences class >> sharedCacheFolder [
 ]
 
 { #category : #'startup/shutdown' }
-DeNigrisPreferences class >> shutDown: quitting [
-
-	DeNigrisPreferences instance shutDown: quitting.
-]
-
-{ #category : #'startup/shutdown' }
 DeNigrisPreferences class >> startUp: newSession [
 
 	DeNigrisPreferences instance startUp: newSession.
