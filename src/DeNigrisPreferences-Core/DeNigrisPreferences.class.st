@@ -5,8 +5,7 @@ Class {
 	#name : #DeNigrisPreferences,
 	#superclass : #Object,
 	#instVars : [
-		'lastLoadOnce',
-		'wasEachRunThisSession'
+		'lastLoadOnce'
 	],
 	#classInstVars : [
 		'instance'
@@ -479,13 +478,6 @@ DeNigrisPreferences >> informImageFolder [
 	UIManager default inform: FileLocator imageDirectory fullName.
 ]
 
-{ #category : #'initialize-release' }
-DeNigrisPreferences >> initialize [
-
-	super initialize.
-	wasEachRunThisSession := false.
-]
-
 { #category : #utilities }
 DeNigrisPreferences >> installCalypso [
 
@@ -520,14 +512,6 @@ DeNigrisPreferences >> loadDevEnhancements [
 { #category : #loading }
 DeNigrisPreferences >> loadEachStartup [
 
-	self wasEachRunThisSession ifTrue: [
-		"I want to figure out when this would be hit. I don't remember. After I figure it out, remove the exception.
-		* One circumstance is if an image is saved, then is not properly shut down e.g. crashes"
-		UIManager default inform: 'Preferences each load already run'.
-		 ^ self ].
-	wasEachRunThisSession := true.
-	"self log: 'Updating...'.
-	self class update."
 	self basicLoadEachStartup.
 ]
 
@@ -671,12 +655,6 @@ DeNigrisPreferences >> setMcConfigurationFolder [
 ]
 
 { #category : #'startup/shutdown' }
-DeNigrisPreferences >> shutDown: quitting [
-
-	quitting ifTrue: [ wasEachRunThisSession := false ].
-]
-
-{ #category : #'startup/shutdown' }
 DeNigrisPreferences >> startUp: newSession [
 
 	newSession ifFalse: [ ^ self ].
@@ -717,10 +695,4 @@ DeNigrisPreferences >> useSharedCacheRepository [
 	[ MCCacheRepository cacheDirectory: self class sharedCacheFolder ensureCreateDirectory ]
 		on: Error
 		do: [ :err | UIManager default inform: 'Failed setting the shared cache' ]
-]
-
-{ #category : #'private-testing' }
-DeNigrisPreferences >> wasEachRunThisSession [
-
-	^ wasEachRunThisSession.
 ]
