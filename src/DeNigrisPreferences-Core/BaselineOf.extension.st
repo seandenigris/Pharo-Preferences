@@ -12,11 +12,6 @@ BaselineOf class >> beGToolkitAware [
 ]
 
 { #category : #'*DeNigrisPreferences-Core' }
-BaselineOf class >> iceRepository [
-	^ IceRepository registry detect: [ :e | e includesPackageNamed: self package name ].
-]
-
-{ #category : #'*DeNigrisPreferences-Core' }
 BaselineOf class >> isGTImage [
 	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'GToolkit-' ]
 ]
