@@ -11,7 +11,20 @@ BaselineOf class >> gtSetWindowTitles [
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> lepiterCommitDatabase [
-	LibC system: 'cd "', self iceRepository location fullName, '"; git add lepiter/*; git commit -m lepiter-sync'.
+	| repairCommand branch strategy checkout commitCommand |
+	commitCommand := 'cd "' , self iceRepository location fullName
+				, '"; git add lepiter/*; git commit -m lepiter-sync'.
+	LibC system: commitCommand.
+	
+	repairCommand := IceTipCheckoutModel new.
+	branch := (IceTipRepositoryModel on: self iceRepository) branchModel.
+	strategy := checkout checkoutStrategies last.
+	self assert: (strategy isKindOf: IceCheckoutDoNotLoadPackages).
+	checkout
+		checkoutStrategy: strategy;
+		commitish: branch;
+		diff;
+		checkout
 ]
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
