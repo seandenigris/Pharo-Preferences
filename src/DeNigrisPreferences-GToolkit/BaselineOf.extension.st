@@ -1,21 +1,36 @@
 Extension { #name : #BaselineOf }
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
-BaselineOf class >> addLepiterDatabase [
-	| lepiterFolder db |
-	lepiterFolder := self iceRepository location / 'lepiter'.
-	lepiterFolder exists ifFalse: [ ^ self ].
-	db := LeLocalStoreLoad current loadAndMonitorFrom: lepiterFolder.
-	LeDatabasesRegistry default defaultLogicalDatabase addDB: db
-]
-
-{ #category : #'*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> gtSetWindowTitles [
 	| projectName |
 	projectName := self name allButFirst: 'BaselineOf' size.
 	GlutinWindowsRegistry default
 		windowsDetailedTitleWithPrefix: projectName
 		andSuffix: ''
+]
+
+{ #category : #'*DeNigrisPreferences-GToolkit' }
+BaselineOf class >> lepiterCommitDatabase [
+	LibC system: 'cd "', self iceRepository location fullName, '"; git add lepiter/*; git commit -m lepiter-sync'.
+]
+
+{ #category : #'*DeNigrisPreferences-GToolkit' }
+BaselineOf class >> lepiterCreateDatabase [
+	self lepiterDatabaseFolder ensureCreateDirectory.
+	self lepiterLoadDatabase
+]
+
+{ #category : #'*DeNigrisPreferences-GToolkit' }
+BaselineOf class >> lepiterDatabaseFolder [
+	^ self iceRepository location / 'lepiter'.
+]
+
+{ #category : #'*DeNigrisPreferences-GToolkit' }
+BaselineOf class >> lepiterLoadDatabase [
+	| db |
+	self lepiterDatabaseFolder exists ifFalse: [ ^ self ].
+	db := LeLocalStoreLoad current loadAndMonitorFrom: self lepiterDatabaseFolder.
+	LeDatabasesRegistry default defaultLogicalDatabase addDB: db
 ]
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
@@ -29,6 +44,6 @@ BaselineOf class >> markdownComment [
 { #category : #'*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> setUpGToolkit [
 	| projectName |
-	self addLepiterDatabase.
+	self lepiterLoadDatabase.
 	self gtSetWindowTitles.
 ]
