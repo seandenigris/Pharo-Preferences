@@ -10,6 +10,24 @@ BaselineOf class >> gtSetWindowTitles [
 ]
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
+BaselineOf class >> gtViewLepiterOn: aView [
+	<gtClassView>
+	^ aView columnedList
+		title: 'Lepiter' translated;
+		priority: 80;
+		items: [ self allSubclasses select: [ :e | e lepiterDatabaseFolder ifNil: [ false ] ifNotNil: [ :folder | folder exists ] ] ];
+		column: 'Status' 
+			icon: [ :aBaseline | 
+				aBaseline lepiterDatabase 
+					ifNil: [ BrGlamorousIcons redcircle ] 
+					ifNotNil: [ aBaseline gitHasUnstaged 
+						ifTrue: [ BrGlamorousIcons yellowcircle ] 
+						ifFalse: [ BrGlamorousIcons greencircle ] ] ]
+			width: 75;
+		column: 'Name' text: [ :aBaseline | aBaseline name asRopedText ]
+]
+
+{ #category : #'*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> lepiterCommitDatabase [
 	| repairCommand branch strategy checkout commitCommand |
 	commitCommand := 'cd "' , self iceRepository location fullName
@@ -35,7 +53,7 @@ BaselineOf class >> lepiterCreateDatabase [
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> lepiterDatabaseFolder [
-	^ self iceRepository location / 'lepiter'.
+	^ self iceRepository ifNotNil: [ :repo | repo location / 'lepiter' ].
 ]
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
