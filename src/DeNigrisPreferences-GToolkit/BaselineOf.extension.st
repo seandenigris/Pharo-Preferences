@@ -20,6 +20,6 @@ BaselineOf class >> markdownComment [
 { #category : #'*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> setUpGToolkit [
 	| projectName |
-	self lepiterLoadDatabase.
+	self lepiter loadDatabase.
 	self gtSetWindowTitles.
 ]
