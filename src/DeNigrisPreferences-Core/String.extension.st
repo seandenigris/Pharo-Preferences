@@ -1,7 +1,11 @@
 Extension { #name : #String }
 
 { #category : #'*DeNigrisPreferences-Core' }
-String >> copyToClipboard [
-
-	Clipboard clipboardText: self
+String >> copyToClipboardDescription [
+	<magritteActionDescription>
+	^ MAActionDescription new	
+			action: #copyToClipboard;
+			priority: 1200;
+			comment: 'Copy to clipboard';
+			yourself
 ]
