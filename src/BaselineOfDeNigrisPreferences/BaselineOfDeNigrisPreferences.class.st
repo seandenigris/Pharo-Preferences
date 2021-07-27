@@ -64,7 +64,9 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 { #category : #accessing }
 BaselineOfDeNigrisPreferences >> customProjectAttributes [
 	^ OrderedCollection streamContents: [ :col |
-		self isGTImage ifTrue: [ col nextPut: #GToolkit ].
+		self isGTImage
+			ifFalse: [ col nextPut: #notGToolkit ]
+			ifTrue: [ col nextPut: #GToolkit ].
 		self isLepiterImage ifTrue: [ col nextPut: #Lepiter ]. ]
 ]
 
