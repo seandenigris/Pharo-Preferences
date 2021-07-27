@@ -6,7 +6,7 @@ BaselineOf class >> beGToolkitAware [
 	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: ''GToolkit-'' ]' classified: 'testing'.
 	self compile: 'customProjectAttributes
 	^ self isGTImage
-			ifFalse: [ #() ]
+			ifFalse: [ #(notGToolkit) ]
 			ifTrue: [ #(GToolkit) ]' classified: 'accessing'.
 	
 ]
