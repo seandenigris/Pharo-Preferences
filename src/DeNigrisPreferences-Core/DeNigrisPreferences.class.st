@@ -653,7 +653,7 @@ DeNigrisPreferences >> startUp: newSession [
 
 	newSession ifFalse: [ ^ self ].
 	self loadEachStartup.
-	self class startupLoader default errors ifNotEmpty: #explore.
+	self class startupLoader default errors ifNotEmpty: [ UIManager default inform: 'Startup errors. View via `DeNigrisPreferences startupLoader default errors`' ]
 ]
 
 { #category : #utilities }
