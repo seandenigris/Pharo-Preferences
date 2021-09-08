@@ -1,6 +1,6 @@
-Extension { #name : #IceMethodDefinition }
+Extension { #name : 'IceMethodDefinition' }
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 IceMethodDefinition >> target [
 	| owner |
 	owner := Smalltalk globals at: self className.

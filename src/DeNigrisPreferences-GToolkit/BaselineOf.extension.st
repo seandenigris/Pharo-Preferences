@@ -1,6 +1,6 @@
-Extension { #name : #BaselineOf }
+Extension { #name : 'BaselineOf' }
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> gtSetWindowTitles [
 	| projectName |
 	projectName := self name allButFirst: 'BaselineOf' size.
@@ -9,7 +9,7 @@ BaselineOf class >> gtSetWindowTitles [
 		andSuffix: ''
 ]
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> markdownComment [
 	| generationNotice pillar |
 	generationNotice := '""DISCLAIMER"": You are looking at a boring, dead export of living (i.e. dynamic) documentation. To view it in its natural habitat in all its glory, fire up a GToolkit image and check the class comment of ', self name.
@@ -17,9 +17,13 @@ BaselineOf class >> markdownComment [
 	^ PRMarkdownWriter write: pillar
 ]
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> setUpGToolkit [
 	| projectName |
+	
+	"Workaround for https://github.com/feenkcom/gtoolkit/issues/2115"
+	RPackage organizer unregisterPackageNamed: 'TonelFixes'.
+	
 	self lepiter databases do: #load.
 	self gtSetWindowTitles.
 ]

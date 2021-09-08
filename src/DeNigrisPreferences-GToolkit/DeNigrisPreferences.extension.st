@@ -1,6 +1,6 @@
-Extension { #name : #DeNigrisPreferences }
+Extension { #name : 'DeNigrisPreferences' }
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 DeNigrisPreferences >> generateElgatoButtonIcons [
 	| names |
 	"Big thanks to Aliaksei Syrel for helping with this implementation!"

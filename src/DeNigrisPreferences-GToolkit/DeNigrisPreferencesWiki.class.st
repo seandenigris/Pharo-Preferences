@@ -1,12 +1,12 @@
 Class {
-	#name : #DeNigrisPreferencesWiki,
-	#superclass : #Object,
+	#name : 'DeNigrisPreferencesWiki',
+	#superclass : 'Object',
 	#traits : 'TAPWiki',
 	#classTraits : 'TAPWiki classTrait',
-	#category : #'DeNigrisPreferences-GToolkit'
+	#category : 'DeNigrisPreferences-GToolkit'
 }
 
-{ #category : #wikiPages }
+{ #category : 'wikiPages' }
 DeNigrisPreferencesWiki class >> wikiPageGToolkit [
 	"This method was automatically generated."
 	<wikiPage: 'GToolkit'>
@@ -18,7 +18,7 @@ DeNigrisPreferencesWiki class >> wikiPageGToolkit [
 Bulk change the window titles with ${method:GlutinWindowsRegistry>>#windowsDetailedTitleWithPrefix:andSuffix:}$. In a new GToolkit image, pass ==GlutinWindowsRegistry mainWindowTag== as the second argument to tag the "main" window i.e. the one that quits the app when it''s closed. On repeated title changes via this message, the tag will remain.'
 ]
 
-{ #category : #wikiPages }
+{ #category : 'wikiPages' }
 DeNigrisPreferencesWiki class >> wikiPageMetacello_Enhancements [
 	"This method was automatically generated."
 	<wikiPage: 'Metacello Enhancements'>
