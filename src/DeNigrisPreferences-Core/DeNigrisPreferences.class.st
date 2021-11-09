@@ -80,8 +80,8 @@ DeNigrisPreferences class >> localRepositoryRoot [
 { #category : #private }
 DeNigrisPreferences class >> log: aString [
 
-	UIManager default defer: [ UIManager default inform: 'DeNigrisPreferences: ', aString ].
-	Transcript show: aString; cr.
+	"UIManager default defer: [ UIManager default inform: 'DeNigrisPreferences: ', aString ].
+	Transcript show: aString; cr."
 ]
 
 { #category : #'world menu' }
