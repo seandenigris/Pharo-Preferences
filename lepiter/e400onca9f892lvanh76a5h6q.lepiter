@@ -1,0 +1,76 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-14T13:25:00.326305-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-14T13:25:00.326305-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "D9IOjCWNDQC5AaSlBJda7g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# IDE Cusomization\rYou can customize the location of e.g. Epicea session files and GToolkit xdocs. See {{gtMethod:BaselineOf class>>#setUpIDE}} .\r\rNB. Keeping as part of DeNigrisPreferences works for now because we are loading projects manually and not via command line handler. The latter could be a problem if run before DeNigrisPreferences is loaded.\r\r"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-14T13:25:00.326268-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-14T13:25:00.326268-05:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Metacello Enhancements"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "42b80e8c-258d-0d00-b8fe-433304975aee"
+	}
+}
