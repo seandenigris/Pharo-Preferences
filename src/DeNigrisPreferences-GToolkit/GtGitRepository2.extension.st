@@ -1,6 +1,6 @@
-Extension { #name : 'GtGitRepository2' }
+Extension { #name : #GtGitRepository2 }
 
-{ #category : '*DeNigrisPreferences-GToolkit' }
+{ #category : #'*DeNigrisPreferences-GToolkit' }
 GtGitRepository2 >> gtChangesFor: aView [
 	<gtView>
 	self workingCopy ifNil: [ ^ aView empty ].

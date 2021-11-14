@@ -54,11 +54,7 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 					spec requires: #'DeNigrisPreferences-Pharo8' ] ].
 					
 	spec for: #'GToolkit' do: [
-		spec baseline: 'ActivePapers' with: [ 
-			spec 
-				repository: 'github://seandenigris/activepapers-pharo:denigris';
-				loads: #('ActivePapers-Wiki') ].
-		spec package: #'DeNigrisPreferences-GToolkit' with: [ spec requires: #(#'DeNigrisPreferences-Core' #ActivePapers) ] ].
+		spec package: #'DeNigrisPreferences-GToolkit' with: [ spec requires: #(#'DeNigrisPreferences-Core') ] ].
 ]
 
 { #category : #accessing }

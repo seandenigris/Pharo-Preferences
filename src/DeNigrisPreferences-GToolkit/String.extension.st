@@ -1,6 +1,6 @@
-Extension { #name : 'String' }
+Extension { #name : #String }
 
-{ #category : '*DeNigrisPreferences-GToolkit' }
+{ #category : #'*DeNigrisPreferences-GToolkit' }
 String >> copyToClipboardDescription: desc [
 	<magritteActionDescription: #copyToClipboardDescription>
 

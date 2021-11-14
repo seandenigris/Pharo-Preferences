@@ -1,1 +1,1 @@
-Package { #name : 'DeNigrisPreferences-GToolkit' }
+Package { #name : #'DeNigrisPreferences-GToolkit' }
