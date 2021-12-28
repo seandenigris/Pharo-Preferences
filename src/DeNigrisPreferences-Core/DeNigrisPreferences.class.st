@@ -362,7 +362,10 @@ DeNigrisPreferences >> configureFormatter [
 
 { #category : #GT }
 DeNigrisPreferences >> configureGT [
-	GtPlaygroundToolRegistryAdaptor unregister.
+	| config |
+	config := Smalltalk globals classNamed: #DpGToolkitConfiguration.
+	config ifNil: [ ^ self ].
+	config apply
 ]
 
 { #category : #actions }

@@ -65,22 +65,16 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 
 { #category : #accessing }
 BaselineOfDeNigrisPreferences >> customProjectAttributes [
-	^ OrderedCollection streamContents: [ :col |
-		self isGTImage
-			ifFalse: [ col nextPut: #notGToolkit ]
-			ifTrue: [ col nextPut: #GToolkit ].
-		self isLepiterImage ifTrue: [ col nextPut: #Lepiter ]. ]
+	^ self isGTImage
+		ifTrue: [ #(#GToolkit) ]
+		ifFalse: [ #(#notGToolkit) ]
 ]
 
 { #category : #testing }
 BaselineOfDeNigrisPreferences >> isGTImage [
-	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'GToolkit-' ]
-]
-
-{ #category : #testing }
-BaselineOfDeNigrisPreferences >> isLepiterImage [
-	"Lepiter has its own startup script mechanism, which ensures scripts get run before the DB is loaded; thus it's unlikely we will do anything for Lepiter here"
-	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'Lepiter-' ]
+	
+	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'Lepiter-' ].
+	"Implementation note: used to check for GToolkit prefix, but P7 has a GToolkit-Examples package. Lepiter, OTOH, could only be loaded in a GT image"
 ]
 
 { #category : #'post load' }
