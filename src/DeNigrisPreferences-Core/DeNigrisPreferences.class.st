@@ -472,7 +472,8 @@ DeNigrisPreferences >> installCalypso [
 
 { #category : #GT }
 DeNigrisPreferences >> isGTImage [
-	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'GToolkit-' ]
+	
+	^ BaselineOf isGTImage
 ]
 
 { #category : #Launcher }
