@@ -3,10 +3,10 @@ Extension { #name : #BaselineOf }
 { #category : #'*DeNigrisPreferences-Core' }
 BaselineOf class >> beGToolkitAware [
 	self 
-		compile: (self class sourceCodeAt: #isGTImage) 
+		compile: (self class lookupSelector: #isGTImage) sourceCode
 		classified: 'testing'.
 	self 
-		compile: (self class sourceCodeAt: #customProjectAttributes)
+		compile: (self class lookupSelector: #customProjectAttributes) sourceCode
 		classified: 'accessing'.
 	
 ]
