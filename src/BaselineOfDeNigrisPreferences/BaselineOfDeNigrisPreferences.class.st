@@ -17,8 +17,10 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 	spec for: #'common' do: [
 		spec 
 			postLoadDoIt: #postLoad;
+			baseline: 'Iterators' with: [
+				spec repository: 'github://juliendelplanque/Iterators/src' ];
 			baseline: 'MonticelloLogin' with: [ 
-				spec repository: 'github://seandenigris/Monticello-Login/repository' ];
+				spec repository: 'github://seandenigris/Monticello-Login' ];
 			package: #'DeNigrisPreferences-Core' with: [
 				spec requires: #'MonticelloLogin'. ] ].
 
