@@ -1,7 +1,7 @@
 Extension { #name : #GlutinWindowsRegistry }
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
-GlutinWindowsRegistry classSide >> mainWindowTag [
+GlutinWindowsRegistry class >> mainWindowTag [
 	^ ' - main'.
 ]
 
