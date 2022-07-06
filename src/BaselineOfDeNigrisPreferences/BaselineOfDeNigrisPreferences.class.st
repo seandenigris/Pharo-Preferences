@@ -62,7 +62,10 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 					spec requires: #'DeNigrisPreferences-Pharo8' ] ].
 					
 	spec for: #'GToolkit' do: [
-		spec package: #'DeNigrisPreferences-GToolkit' with: [ spec requires: #(#'DeNigrisPreferences-Core') ] ].
+		spec 
+			baseline: 'GToolkitRobocoder' with: [
+				spec repository: 'github://feenkcom/gtoolkit-robocoder:main' ];
+			package: #'DeNigrisPreferences-GToolkit' with: [ spec requires: #(#'DeNigrisPreferences-Core') ] ].
 ]
 
 { #category : #accessing }
