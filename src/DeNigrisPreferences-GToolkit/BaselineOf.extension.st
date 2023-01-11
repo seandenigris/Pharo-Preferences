@@ -11,11 +11,9 @@ BaselineOf class >> gtSetWindowTitles [
 
 { #category : #'*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> setUpGToolkit [
-	| projectName |
 	
 	"Workaround for https://github.com/feenkcom/gtoolkit/issues/2115"
 	RPackage organizer unregisterPackageNamed: 'TonelFixes'.
 	
 	self lepiter databases do: #load.
-	self gtSetWindowTitles.
 ]

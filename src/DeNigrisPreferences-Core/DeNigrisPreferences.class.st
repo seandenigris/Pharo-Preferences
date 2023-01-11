@@ -269,6 +269,7 @@ DeNigrisPreferences class >> usbRepositoryRoot [
 
 "	| isMac |
 	isMac := FileLocator imageDirectory pathSegments first = 'Volumes'."
+	self error: 'what should be the current practice?'.
 	^ '/Volumes/SEAN/Smalltalk/Repositories' asFileReference.
 ]
 
@@ -280,6 +281,9 @@ DeNigrisPreferences >> addMyMcRepos [
 	urls do: [ :url | | repo |
 		repo := MCHttpRepository location: url asString.
 		MCRepositoryGroup default addRepository: repo ].
+		
+	MlConfigurationFile new reference exists ifFalse: [ ^ self ].
+		
 	MlFrontDesk new
 		logInToSqueakSource;
 		logInToSqueakSource3;
