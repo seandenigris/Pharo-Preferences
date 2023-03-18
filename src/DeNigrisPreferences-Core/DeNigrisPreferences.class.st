@@ -313,6 +313,8 @@ DeNigrisPreferences >> basicLoadEachStartup [
 
 	Author fullName: 'SeanDeNigris'.
 	
+	self configureGit.
+	
 	"Set paths on each startup because they will be different if we are on a USB stick"
 	self useSharedCacheRepository.
 	self setLocalRepositoryRoot.
@@ -370,6 +372,16 @@ DeNigrisPreferences >> configureGT [
 	config := Smalltalk globals classNamed: #DpGToolkitConfiguration.
 	config ifNil: [ ^ self ].
 	config apply
+]
+
+{ #category : #'private-loading' }
+DeNigrisPreferences >> configureGit [
+
+	OSPlatform current isMacOSX ifFalse: [ ^ self ].
+	
+	Smalltalk globals
+		at: #CwMac
+		ifPresent: [ :macClass | macClass current addSSHKeysToKeychain ]
 ]
 
 { #category : #actions }
