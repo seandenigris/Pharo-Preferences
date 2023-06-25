@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'DeNigrisPreferences',
-      #directory : 'repository',
+      #directory : 'src',
       #platforms : [ #pharo ]
     }
   ]
