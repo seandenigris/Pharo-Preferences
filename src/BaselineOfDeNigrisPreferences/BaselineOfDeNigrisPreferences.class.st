@@ -17,9 +17,9 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 	spec for: #'common' do: [
 		spec 
 			postLoadDoIt: #postLoad;
-			baseline: 'Iterators' with: [
+			baseline: #'Iterators' with: [
 				spec repository: 'github://juliendelplanque/Iterators/src' ];
-			baseline: 'MonticelloLogin' with: [ 
+			baseline: #'MonticelloLogin' with: [ 
 				spec repository: 'github://seandenigris/Monticello-Login' ];
 			package: #'DeNigrisPreferences-Core' with: [
 				spec requires: #'MonticelloLogin'. ] ].
@@ -28,19 +28,19 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 		spec
 			package: #'DeNigrisPreferences-Core' with: [
 					spec includes: #'DeNigrisPreferences-Platform' ];
-			package: #'DeNigrisPreferences-Platform' with: 'DeNigrisPreferences-Platform.pharo20' ].
+			package: #'DeNigrisPreferences-Platform' with: #'DeNigrisPreferences-Platform.pharo20' ].
 	
 	spec for: #'pharo3.x' do: [
 		spec
 			package: #'DeNigrisPreferences-Core' with: [
 					spec includes: #'DeNigrisPreferences-Platform' ];
-			package: #'DeNigrisPreferences-Platform' with: 'DeNigrisPreferences-Platform.pharo30'. ].
+			package: #'DeNigrisPreferences-Platform' with: #'DeNigrisPreferences-Platform.pharo30'. ].
 	
 	spec for: #'pharo4.x' do: [
 		spec
 			package: #'DeNigrisPreferences-Core' with: [
 					spec includes: #'DeNigrisPreferences-Platform' ];
-			package: #'DeNigrisPreferences-Platform' with: 'DeNigrisPreferences-Platform.pharo40' ].
+			package: #'DeNigrisPreferences-Platform' with: #'DeNigrisPreferences-Platform.pharo40' ].
 
 	spec for: #(#'pharo5.x' #'pharo6.x') do: [
 		spec
@@ -63,7 +63,7 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 					
 	spec for: #'GToolkit' do: [
 		spec 
-			baseline: 'GToolkitRobocoder' with: [
+			baseline: #'GToolkitRobocoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-robocoder:main' ];
 			package: #'DeNigrisPreferences-GToolkit' with: [ spec requires: #(#'DeNigrisPreferences-Core') ] ].
 ]
