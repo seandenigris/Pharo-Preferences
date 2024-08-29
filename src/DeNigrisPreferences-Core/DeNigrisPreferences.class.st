@@ -72,9 +72,9 @@ DeNigrisPreferences class >> linkPreferenceSupportFiles [
 { #category : #locations }
 DeNigrisPreferences class >> localRepositoryRoot [
  
-	^ self laptopRepositoryRoot exists
+	^ self laptopRepositoryRoot "exists
 		ifTrue: [ self laptopRepositoryRoot ]
-		ifFalse: [ self usbRepositoryRoot ].
+		ifFalse: [ self usbRepositoryRoot ]."
 ]
 
 { #category : #private }
@@ -689,6 +689,7 @@ DeNigrisPreferences >> useLatAmMirror [
 { #category : #actions }
 DeNigrisPreferences >> useSharedCacheRepository [
 	
+	self class localRepositoryRoot exists ifFalse: [ ^ self ].
 	MCCacheRepository cacheDirectory resolve = self class sharedCacheFolder resolve ifTrue: [ ^ self ].
 	[ MCCacheRepository cacheDirectory: self class sharedCacheFolder ensureCreateDirectory ]
 		on: Error
