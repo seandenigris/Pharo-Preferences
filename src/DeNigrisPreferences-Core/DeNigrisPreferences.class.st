@@ -638,7 +638,15 @@ DeNigrisPreferences >> setFonts [
 
 { #category : #Launcher }
 DeNigrisPreferences >> setLauncherImageDirectory [
+
 	#PhLDirectoryBasedImageRepository asClass location: FileLocator home / 'Dynabook' / 'Working Images'
+	
+	"Might be easier to symlink so that the setting doesn't have to be handled on each Launcher upgrade
+	
+	SuLn new
+		original: FileLocator home / 'Dynabook/Working Images';
+		link: FileLocator home / 'Documents/Pharo/images';
+		run."
 ]
 
 { #category : #actions }
