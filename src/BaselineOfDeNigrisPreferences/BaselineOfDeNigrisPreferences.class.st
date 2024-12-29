@@ -60,7 +60,15 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 			package: #'DeNigrisPreferences-Pharo8';
 			package: #'DeNigrisPreferences-Core' with: [
 					spec requires: #'DeNigrisPreferences-Pharo8' ] ].
-					
+	
+	spec for: #notGToolkit do: [
+		spec 
+			baseline: #'PetitParser2' with: [
+				spec repository: 'github://seandenigris/PetitParser2' ].
+		spec 
+			package: #'DeNigrisPreferences-Core' with: [ 
+				spec requires: #(#'PetitParser2') ] ].
+				
 	spec for: #'GToolkit' do: [
 		spec 
 			baseline: #'GToolkitRobocoder' with: [
