@@ -71,8 +71,6 @@ BaselineOfDeNigrisPreferences >> baseline: spec [
 				
 	spec for: #'GToolkit' do: [
 		spec 
-			baseline: #'GToolkitRobocoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-robocoder:main' ];
 			package: #'DeNigrisPreferences-GToolkit' with: [ spec requires: #(#'DeNigrisPreferences-Core') ] ].
 ]
 
