@@ -1,6 +1,6 @@
-Extension { #name : #MCSaveVersionDialog }
+Extension { #name : 'MCSaveVersionDialog' }
 
-{ #category : #'*DeNigrisPreferences-Core' }
+{ #category : '*DeNigrisPreferences-Core' }
 MCSaveVersionDialog >> defaultBounds [
 
 	| bounds |
@@ -8,7 +8,7 @@ MCSaveVersionDialog >> defaultBounds [
 	^ bounds right: bounds right * 1/3.
 ]
 
-{ #category : #'*DeNigrisPreferences-Core' }
+{ #category : '*DeNigrisPreferences-Core' }
 MCSaveVersionDialog >> showModally [
 	|  |
 	modal := true.

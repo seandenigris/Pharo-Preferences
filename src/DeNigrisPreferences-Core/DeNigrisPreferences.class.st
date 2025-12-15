@@ -2,23 +2,24 @@
 See ${class:BaselineOfDeNigrisPreferences}$ for main project documentation.
 "
 Class {
-	#name : #DeNigrisPreferences,
-	#superclass : #Object,
+	#name : 'DeNigrisPreferences',
+	#superclass : 'Object',
 	#instVars : [
 		'lastLoadOnce'
 	],
 	#classInstVars : [
 		'instance'
 	],
-	#category : #'DeNigrisPreferences-Core'
+	#category : 'DeNigrisPreferences-Core',
+	#package : 'DeNigrisPreferences-Core'
 }
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences class >> basicRun: str [ 
 	^ LibC system: str
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences class >> extractTimestampsFromChunk: source [
 
 	| timestampParser |
@@ -28,7 +29,7 @@ DeNigrisPreferences class >> extractTimestampsFromChunk: source [
 	^ (timestampParser island ==> #second) star parse: source
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 DeNigrisPreferences class >> initialize [
 
 	Smalltalk
@@ -36,19 +37,19 @@ DeNigrisPreferences class >> initialize [
 		addToShutDownList: self
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 DeNigrisPreferences class >> instance [
 
 	^ instance ifNil: [ instance := self new ].
 ]
 
-{ #category : #locations }
+{ #category : 'locations' }
 DeNigrisPreferences class >> laptopRepositoryRoot [
 
 	^ FileLocator home / 'Dynabook' / 'Repositories'.
 ]
 
-{ #category : #Launcher }
+{ #category : 'Launcher' }
 DeNigrisPreferences class >> launcherAddUserTemplates [
 	<script>
 	"Needs to be a script because will need to be rerun after sources refreshed"
@@ -56,7 +57,7 @@ DeNigrisPreferences class >> launcherAddUserTemplates [
 	PharoLauncher addTemplateNamed: 'GToolkit' atUrl: 'https://github.com/feenkcom/gtoolkit/releases/latest/download/GT.zip' asUrl inGroupNamed: 'Sean'.
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences class >> linkPreferenceSupportFiles [
 	<script>
 
@@ -69,7 +70,7 @@ DeNigrisPreferences class >> linkPreferenceSupportFiles [
 		LibC system: 'ln -s "', source fullName, '" "', target fullName, '"'. ]
 ]
 
-{ #category : #locations }
+{ #category : 'locations' }
 DeNigrisPreferences class >> localRepositoryRoot [
  
 	^ self laptopRepositoryRoot "exists
@@ -77,14 +78,14 @@ DeNigrisPreferences class >> localRepositoryRoot [
 		ifFalse: [ self usbRepositoryRoot ]."
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DeNigrisPreferences class >> log: aString [
 
 	"UIManager default defer: [ UIManager default inform: 'DeNigrisPreferences: ', aString ].
 	Transcript show: aString; cr."
 ]
 
-{ #category : #'world menu' }
+{ #category : 'world menu' }
 DeNigrisPreferences class >> menuCommandOn: aBuilder [ 
 	<worldMenu> 
 	
@@ -108,14 +109,14 @@ DeNigrisPreferences class >> menuCommandOn: aBuilder [
 				action: [ self instance informImageFolder ].
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DeNigrisPreferences class >> pillarBooklet [
 	<gtExample> "Not an example, but want to inspect result when clicked in tools"
 
 	^ FileLocator home / 'Dynabook'/'Repositories'/'seandenigris'/'Booklet-PublishingAPillarBooklet' / 'book.pillar'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DeNigrisPreferences class >> pillarCheatsheet [
 	<gtExample> "Not an example, but want to inspect result when clicked in tools"
 	^ GtDocumenter forText: '!Cheatsheet
@@ -172,7 +173,7 @@ Highlight language options: bash, css, html, http, json, javascript, pillar, sql
 ${tag:parameter=value|parameter2=value2}$'
 ]
 
-{ #category : #locations }
+{ #category : 'locations' }
 DeNigrisPreferences class >> preferencesFolder [
 
 	| generalPreferencesFolder |
@@ -182,7 +183,7 @@ DeNigrisPreferences class >> preferencesFolder [
 		ifFalse: [ self usbRepositoryRoot parent / 'Preferences' ].
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences class >> run: aString [
 	"self run: 'open http://www.google.com'." 
 
@@ -191,7 +192,7 @@ DeNigrisPreferences class >> run: aString [
 	exitCode = 0 ifFalse: [ self error: '"', aString, '" failed with ', exitCode asString ].
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences class >> saveStartupScript [
 	<script>
 
@@ -212,7 +213,7 @@ DeNigrisPreferences class >> saveStartupScript [
 	StartupPreferencesLoader default addAtStartupInGeneralPreferenceFolder: { loadAction. showErrorsAction }.
 ]
 
-{ #category : #UI }
+{ #category : 'UI' }
 DeNigrisPreferences class >> scriptBrowser [
 	<script>
 	| browser utils scripts |
@@ -239,32 +240,32 @@ DeNigrisPreferences class >> scriptBrowser [
 
 ]
 
-{ #category : #locations }
+{ #category : 'locations' }
 DeNigrisPreferences class >> sharedCacheFolder [
 
 	^ self localRepositoryRoot / 'Shared Cache'.
 ]
 
-{ #category : #'startup/shutdown' }
+{ #category : 'startup/shutdown' }
 DeNigrisPreferences class >> startUp: newSession [
 
 	DeNigrisPreferences instance startUp: newSession.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DeNigrisPreferences class >> startupLoader [
 
 	^ StartupPreferencesLoader
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DeNigrisPreferences class >> transcriptIsOpen [
 
 	World submorphThat: [ :e | e model = Transcript ] ifNone: [ ^ false ].
 	^ true.
 ]
 
-{ #category : #locations }
+{ #category : 'locations' }
 DeNigrisPreferences class >> usbRepositoryRoot [
 
 "	| isMac |
@@ -273,7 +274,7 @@ DeNigrisPreferences class >> usbRepositoryRoot [
 	^ '/Volumes/SEAN/Smalltalk/Repositories' asFileReference.
 ]
 
-{ #category : #MC }
+{ #category : 'MC' }
 DeNigrisPreferences >> addMyMcRepos [
 
 	| urls |
@@ -290,7 +291,7 @@ DeNigrisPreferences >> addMyMcRepos [
 		logInToSmalltalkHub.
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 DeNigrisPreferences >> areNonUpdateScriptPackagesPresent [
 
 	| updateMessage updateMethod scriptMessage filesLoadedByScript scriptPackagesNotLoaded packagesNotInScript |
@@ -306,7 +307,7 @@ DeNigrisPreferences >> areNonUpdateScriptPackagesPresent [
 	^ scriptPackagesNotLoaded isEmpty and: [ packagesNotInScript isEmpty ].
 ]
 
-{ #category : #'private-loading' }
+{ #category : 'private-loading' }
 DeNigrisPreferences >> basicLoadEachStartup [
 
 	self log: 'Loading "each startup" script...'.
@@ -328,7 +329,7 @@ DeNigrisPreferences >> basicLoadEachStartup [
 	self loadOnce
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> browseMethodsSelect: aBlock [
 	"self new browseMethodsSelect: [ :e | e dateMethodLastSubmitted = '1/24/2010'  asDate ]"
 
@@ -339,7 +340,7 @@ DeNigrisPreferences >> browseMethodsSelect: aBlock [
 		run.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> closeWelcomeWindow [
 
 	| welcomeWindows |
@@ -347,7 +348,7 @@ DeNigrisPreferences >> closeWelcomeWindow [
 	welcomeWindows do: [ :e | e delete ].
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> configureCompletion [
 
 	NECPreferences
@@ -361,12 +362,12 @@ DeNigrisPreferences >> configureCompletion [
 	NECEntry spaceAfterCompletion: false.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> configureFormatter [
 	"See RBConfigurableFormatter class-side settings"
 ]
 
-{ #category : #GT }
+{ #category : 'GT' }
 DeNigrisPreferences >> configureGT [
 	| config |
 	config := Smalltalk globals classNamed: #DpGToolkitConfiguration.
@@ -374,7 +375,7 @@ DeNigrisPreferences >> configureGT [
 	config apply
 ]
 
-{ #category : #'private-loading' }
+{ #category : 'private-loading' }
 DeNigrisPreferences >> configureGit [
 
 	OSPlatform current isMacOSX ifFalse: [ ^ self ].
@@ -384,7 +385,7 @@ DeNigrisPreferences >> configureGit [
 		ifPresent: [ :macClass | macClass current addSSHKeysToKeychain ]
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> configureIceberg [
 	Iceberg enableMetacelloIntegration: true.
 	
@@ -394,7 +395,7 @@ DeNigrisPreferences >> configureIceberg [
 		sharedRepositoriesLocation: self class localRepositoryRoot"
 ]
 
-{ #category : #Launcher }
+{ #category : 'Launcher' }
 DeNigrisPreferences >> configureLauncher [
 
 	self setLauncherImageDirectory.
@@ -403,19 +404,19 @@ DeNigrisPreferences >> configureLauncher [
 	self loadSmallWorld.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DeNigrisPreferences >> daytimeTheme [
 
 	^ PharoLightTheme
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> disableLatAmMirror [
 
 	(Smalltalk at: #MRManager) removeFrom: 'http://www.squeaksource.com/'.
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> disablePackageCacheDuring: aBlock [
 
 	| originalCacheDirectory tempCache |
@@ -429,12 +430,12 @@ DeNigrisPreferences >> disablePackageCacheDuring: aBlock [
 		tempCache deleteAll ].
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> enableShortcutHelp [
 	ShortcutReminder enabled: true.
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> fixIcebergRepoLocations [
 	"E.g. after an image is moved or renamed, its local Iceberg repos become broken because the locations are stored as static FileReferences instead of dynamic FileLocations following the image around. Limitation: assumes all images are stored in flat folders under root"
 	| imageRoot repos |
@@ -453,7 +454,7 @@ DeNigrisPreferences >> fixIcebergRepoLocations [
 			e location: fixedLocation ]
 ]
 
-{ #category : #fixes }
+{ #category : 'fixes' }
 DeNigrisPreferences >> fixIssue5656 [
 	"Issue 5656: Large fonts make tools slow 
  http://code.google.com/p/pharo/issues/detail?id=5656"
@@ -463,19 +464,19 @@ DeNigrisPreferences >> fixIssue5656 [
 	StandardFonts defaultFont: smallerFont.
 ]
 
-{ #category : #'private-testing' }
+{ #category : 'private-testing' }
 DeNigrisPreferences >> hasLoadOnceChanged [
 
 	^ lastLoadOnce ~= (self class>>#loadOnce) timeStamp.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> informImageFolder [
 
 	UIManager default inform: FileLocator imageDirectory fullName.
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> installCalypso [
 
 	Metacello new
@@ -486,19 +487,19 @@ DeNigrisPreferences >> installCalypso [
 	#ClyBrowser asClass beAllDefault
 ]
 
-{ #category : #GT }
+{ #category : 'GT' }
 DeNigrisPreferences >> isGTImage [
 	
 	^ BaselineOf isGTImage
 ]
 
-{ #category : #Launcher }
+{ #category : 'Launcher' }
 DeNigrisPreferences >> isLauncherImage [
 	
 	^ Smalltalk globals hasClassNamed: #PhLDirectoryBasedImageRepository
 ]
 
-{ #category : #'project loading' }
+{ #category : 'project loading' }
 DeNigrisPreferences >> loadDevEnhancements [
 
 	Metacello new
@@ -507,13 +508,13 @@ DeNigrisPreferences >> loadDevEnhancements [
 		load
 ]
 
-{ #category : #loading }
+{ #category : 'loading' }
 DeNigrisPreferences >> loadEachStartup [
 
 	self basicLoadEachStartup.
 ]
 
-{ #category : #loading }
+{ #category : 'loading' }
 DeNigrisPreferences >> loadOnce [
 
 	self log: 'Loading one-time startup script...'.
@@ -531,7 +532,7 @@ DeNigrisPreferences >> loadOnce [
 	lastLoadOnce := thisContext method timeStamp.
 ]
 
-{ #category : #'project loading' }
+{ #category : 'project loading' }
 DeNigrisPreferences >> loadSetup [
 
 	Gofer it
@@ -542,7 +543,7 @@ DeNigrisPreferences >> loadSetup [
 	(Smalltalk at: #ConfigurationOfDeNigrisSetup) project bleedingEdge load.
 ]
 
-{ #category : #'project loading' }
+{ #category : 'project loading' }
 DeNigrisPreferences >> loadSmallWorld [
 	Metacello new
 		repository: 'github://seandenigris/Small-World';
@@ -550,13 +551,13 @@ DeNigrisPreferences >> loadSmallWorld [
 		load
 ]
 
-{ #category : #logging }
+{ #category : 'logging' }
 DeNigrisPreferences >> log: aString [
 
 	self class log: aString.
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> migrate: oldProjectName fromSqueakSourceToSmalltalkHubAs: newProjectName [
 
 	| source destination |
@@ -577,36 +578,36 @@ DeNigrisPreferences >> migrate: oldProjectName fromSqueakSourceToSmalltalkHubAs:
 		execute.
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> myMetaRepoUrl [
 
 	^ 'http://smalltalkhub.com/mc/SeanDeNigris/SeansMetaRepo/main' asUrl.
 ]
 
-{ #category : #MC }
+{ #category : 'MC' }
 DeNigrisPreferences >> myOutboxRepoUrl [
 
 	^ 'http://smalltalkhub.com/mc/SeanDeNigris/SeansOutbox/main' asUrl.
 ]
 
-{ #category : #MC }
+{ #category : 'MC' }
 DeNigrisPreferences >> myPlaygroundRepoUrl [
 
 	^ 'http://smalltalkhub.com/mc/SeanDeNigris/SeansPlayground/main' asUrl.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DeNigrisPreferences >> nighttimeTheme [
 
 	^ PharoDarkTheme
 ]
 
-{ #category : #folders }
+{ #category : 'folders' }
 DeNigrisPreferences >> pharoRepositories [
 	^ FileLocator home / 'Dynabook' / 'Repositories'
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> refreshPackageNamed: aString [
 
 	| package |
@@ -616,7 +617,7 @@ DeNigrisPreferences >> refreshPackageNamed: aString [
 		forceRefreshMetaclassDefinedSelectors.
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> replace: oldString with: newString in: file [
 	"self new replace: 'fred' with: 'BOB' in: 'myfile.txt'"
 
@@ -626,17 +627,17 @@ DeNigrisPreferences >> replace: oldString with: newString in: file [
 	file asFileReference writeStreamDo: [ :out | out nextPutAll: newContents ].
 ]
 
-{ #category : #folders }
+{ #category : 'folders' }
 DeNigrisPreferences >> rootDataFolder [
 	^ FileLocator home / 'Dynabook' / 'User Data'
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> setFonts [
 	^ SourceCodeFonts setSourceCodeFonts: SourceCodeFonts sizeLarge.
 ]
 
-{ #category : #Launcher }
+{ #category : 'Launcher' }
 DeNigrisPreferences >> setLauncherImageDirectory [
 
 	#PhLDirectoryBasedImageRepository asClass location: FileLocator home / 'Dynabook' / 'Working Images'
@@ -649,18 +650,18 @@ DeNigrisPreferences >> setLauncherImageDirectory [
 		run."
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> setLocalRepositoryRoot [
 
 	MCDirectoryRepository defaultDirectoryName: self class localRepositoryRoot fullName.
 ]
 
-{ #category : #'private-loading' }
+{ #category : 'private-loading' }
 DeNigrisPreferences >> setMcConfigurationFolder [
 	MlConfigurationFile folder: self class preferencesFolder
 ]
 
-{ #category : #'startup/shutdown' }
+{ #category : 'startup/shutdown' }
 DeNigrisPreferences >> startUp: newSession [
 
 	newSession ifFalse: [ ^ self ].
@@ -668,14 +669,14 @@ DeNigrisPreferences >> startUp: newSession [
 	self class startupLoader default errors ifNotEmpty: [ UIManager default inform: 'Startup errors. View via `DeNigrisPreferences startupLoader default errors`' ]
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> syncSharedCaches [
 	"self new syncSharedCaches"
 
 	DpSyncSharedCaches new execute.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> updateTheme [
 	"Try out the Dark Theme for now..."
 	"(Time now between: '7:00am' asTime and: '9:00pm' asTime)
@@ -683,7 +684,7 @@ DeNigrisPreferences >> updateTheme [
 		ifFalse: [" self nighttimeTheme beCurrent "]"
 ]
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 DeNigrisPreferences >> useLatAmMirror [
 
 	Gofer new 
@@ -694,7 +695,7 @@ DeNigrisPreferences >> useLatAmMirror [
 	(Smalltalk at: #MRManager) redirectFrom: 'http://www.squeaksource.com/' to: 'http://dsal.cl/squeaksource/'. 
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 DeNigrisPreferences >> useSharedCacheRepository [
 	
 	self class localRepositoryRoot exists ifFalse: [ ^ self ].

@@ -1,10 +1,12 @@
 Class {
-	#name : #DeNigrisPreferencesTests,
-	#superclass : #TestCase,
-	#category : 'DeNigrisPreferences-Core-Tests'
+	#name : 'DeNigrisPreferencesTests',
+	#superclass : 'TestCase',
+	#category : 'DeNigrisPreferences-Core-Tests',
+	#package : 'DeNigrisPreferences-Core',
+	#tag : 'Tests'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 DeNigrisPreferencesTests >> testIsLauncherImage [
 	"Mindless test to get Travis passing"
 

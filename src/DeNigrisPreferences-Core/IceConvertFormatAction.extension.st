@@ -1,6 +1,6 @@
-Extension { #name : #IceConvertFormatAction }
+Extension { #name : 'IceConvertFormatAction' }
 
-{ #category : #'*DeNigrisPreferences-Core' }
+{ #category : '*DeNigrisPreferences-Core' }
 IceConvertFormatAction >> migrateSources [
 	| commit |
 	

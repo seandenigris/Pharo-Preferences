@@ -1,1 +1,1 @@
-Package { #name : #'DeNigrisPreferences-Core' }
+Package { #name : 'DeNigrisPreferences-Core' }

@@ -1,6 +1,6 @@
-Extension { #name : #BaselineOf }
+Extension { #name : 'BaselineOf' }
 
-{ #category : #'*DeNigrisPreferences-Core' }
+{ #category : '*DeNigrisPreferences-Core' }
 BaselineOf class >> beGToolkitAware [
 	self 
 		compile: (self class lookupSelector: #isGTImage) sourceCode
@@ -11,7 +11,7 @@ BaselineOf class >> beGToolkitAware [
 	
 ]
 
-{ #category : #'*DeNigrisPreferences-Core' }
+{ #category : '*DeNigrisPreferences-Core' }
 BaselineOf class >> customProjectAttributes [
 
 	^ self isGTImage
@@ -21,14 +21,14 @@ BaselineOf class >> customProjectAttributes [
 	"This is just for code generation purposes. To have an effect, it needs to be on the instance-side, but that could hide problems in other baselines because DeNigrisPreferences is not guaranteed to be loaded"
 ]
 
-{ #category : #'*DeNigrisPreferences-Core' }
+{ #category : '*DeNigrisPreferences-Core' }
 BaselineOf class >> isGTImage [
 	
 	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'Lepiter-' ].
 	"Implementation note: used to check for GToolkit prefix, but P7 has a GToolkit-Examples package. Lepiter, OTOH, could only be loaded in a GT image"
 ]
 
-{ #category : #'*DeNigrisPreferences-Core' }
+{ #category : '*DeNigrisPreferences-Core' }
 BaselineOf class >> setUpIDE [
 	"To use, a subclass should define class-side #dataFolder returning anAbstractFileReference"
 	

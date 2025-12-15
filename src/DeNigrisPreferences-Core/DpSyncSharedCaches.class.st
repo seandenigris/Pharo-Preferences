@@ -8,8 +8,8 @@ self new
 	execute.
 "
 Class {
-	#name : #DpSyncSharedCaches,
-	#superclass : #Object,
+	#name : 'DpSyncSharedCaches',
+	#superclass : 'Object',
 	#instVars : [
 		'usbCache',
 		'shouldPush',
@@ -18,16 +18,17 @@ Class {
 	#classInstVars : [
 		'usbCache'
 	],
-	#category : 'DeNigrisPreferences-Core'
+	#category : 'DeNigrisPreferences-Core',
+	#package : 'DeNigrisPreferences-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 DpSyncSharedCaches >> areAllCachesAvailable [
 
 	^ usbCache isMounted and: [ self laptopSharedCache exists ].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 DpSyncSharedCaches >> execute [
 
 	self areAllCachesAvailable ifFalse: [
@@ -37,64 +38,64 @@ DpSyncSharedCaches >> execute [
 	self shouldPull ifTrue: [ self pullFromHome ].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 DpSyncSharedCaches >> initialize [
 	super initialize.
 	usbCache := DpUsbSharedCache new.
 	shouldPush := shouldPull := true.
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpSyncSharedCaches >> laptopReferenceFolder [
 	^ '/Users/sean/Squeak/Reference' asFileReference.
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpSyncSharedCaches >> laptopRepositoryRoot [
 	^ self laptopSharedCache parent
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 DpSyncSharedCaches >> laptopSharedCache [
 
 	^ DeNigrisPreferences laptopRepositoryRoot asFileReference / 'Shared Cache'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpSyncSharedCaches >> pullFromHome [
 
 	self syncFrom: self laptopRepositoryRoot to: self usbRepositoryRoot.
 	self syncFrom: self laptopReferenceFolder to: self usbReferenceFolder
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpSyncSharedCaches >> pushFromUSB [
 
 	self syncFrom: self usbRepositoryRoot to: self laptopRepositoryRoot.
 	self syncFrom: self usbReferenceFolder to: self laptopReferenceFolder.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DpSyncSharedCaches >> shouldPull [
 	^ shouldPull
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DpSyncSharedCaches >> shouldPull: anObject [
 	shouldPull := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DpSyncSharedCaches >> shouldPush [
 	^ shouldPush
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DpSyncSharedCaches >> shouldPush: anObject [
 	shouldPush := anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpSyncSharedCaches >> syncFrom: sourceFolder to: targetFolder [ 
 
 	| commandTemplate command |
@@ -111,12 +112,12 @@ DpSyncSharedCaches >> syncFrom: sourceFolder to: targetFolder [
 	DeNigrisPreferences run: command.
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpSyncSharedCaches >> usbReferenceFolder [
 	^ self usbRepositoryRoot parent / 'Reference'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpSyncSharedCaches >> usbRepositoryRoot [
 	^ usbCache folder parent
 ]

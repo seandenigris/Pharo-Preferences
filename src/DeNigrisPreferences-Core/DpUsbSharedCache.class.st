@@ -2,43 +2,44 @@
 self uniqueInstance syncWithLaptop
 "
 Class {
-	#name : #DpUsbSharedCache,
-	#superclass : #Object,
+	#name : 'DpUsbSharedCache',
+	#superclass : 'Object',
 	#classInstVars : [
 		'uniqueInstance'
 	],
-	#category : 'DeNigrisPreferences-Core'
+	#category : 'DeNigrisPreferences-Core',
+	#package : 'DeNigrisPreferences-Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DpUsbSharedCache class >> uniqueInstance [
 
 	^ uniqueInstance ifNil: [ uniqueInstance := self new ].
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DpUsbSharedCache >> folder [
 	^ DeNigrisPreferences usbRepositoryRoot / 'Shared Cache'
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 DpUsbSharedCache >> isMounted [
 
 	^ self folder exists.
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 DpUsbSharedCache >> isMountedOnLaptop [
 
 	^ self isMounted and: [ self laptopSharedCache exists ].
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 DpUsbSharedCache >> laptopSharedCache [
 	^ DeNigrisPreferences laptopRepositoryRoot asFileReference / 'Shared Cache'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpUsbSharedCache >> mczFilesIn: sourceDirectory missingFrom: destinationDirectory [
 
 	| sourceMczFiles sourceFileNames destinationMczFiles destinationFileNames unsyncedFileNames |
@@ -54,7 +55,7 @@ DpUsbSharedCache >> mczFilesIn: sourceDirectory missingFrom: destinationDirector
 	^ unsyncedFileNames sort collect: [ :e | sourceDirectory / e ].
 ]
 
-{ #category : #syncing }
+{ #category : 'syncing' }
 DpUsbSharedCache >> pull [
 
 	| unsyncedFiles |
@@ -62,7 +63,7 @@ DpUsbSharedCache >> pull [
 	self sync: unsyncedFiles to: self folder.
 ]
 
-{ #category : #syncing }
+{ #category : 'syncing' }
 DpUsbSharedCache >> push [
 	"Poor man's UI: throw up an explorer on the unsynced files for review, and throw a halt in the sync code until the user has a chance to review them... the cobbler's children, eh..."
 
@@ -73,7 +74,7 @@ DpUsbSharedCache >> push [
 	self sync: unsyncedFiles to: self laptopSharedCache.
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 DpUsbSharedCache >> sync: files to: folder [
 
 	[ :job |
@@ -86,7 +87,7 @@ DpUsbSharedCache >> sync: files to: folder [
 		
 ]
 
-{ #category : #syncing }
+{ #category : 'syncing' }
 DpUsbSharedCache >> syncWithLaptop [
 
 	self isMountedOnLaptop ifFalse: [ ^ self ].
