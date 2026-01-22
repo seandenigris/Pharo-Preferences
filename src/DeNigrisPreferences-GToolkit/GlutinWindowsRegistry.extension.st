@@ -1,11 +1,11 @@
-Extension { #name : #GlutinWindowsRegistry }
+Extension { #name : 'GlutinWindowsRegistry' }
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 GlutinWindowsRegistry class >> mainWindowTag [
 	^ ' - main'.
 ]
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 GlutinWindowsRegistry >> windowsDetailedTitleWithPrefix: prefixString andSuffix: suffixString [
 	"Example usage:
 		GlutinWindowsRegistry default windowsDetailedTitleWithPrefix: 'Magritte' andSuffix: ''

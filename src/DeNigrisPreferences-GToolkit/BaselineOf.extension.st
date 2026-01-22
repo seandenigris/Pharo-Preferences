@@ -1,6 +1,6 @@
-Extension { #name : #BaselineOf }
+Extension { #name : 'BaselineOf' }
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> gtSetWindowTitles [
 	| projectName |
 	projectName := self name allButFirst: 'BaselineOf' size.
@@ -9,7 +9,7 @@ BaselineOf class >> gtSetWindowTitles [
 		andSuffix: ''
 ]
 
-{ #category : #'*DeNigrisPreferences-GToolkit' }
+{ #category : '*DeNigrisPreferences-GToolkit' }
 BaselineOf class >> setUpGToolkit [
 	
 	self lepiter databases do: #load.
