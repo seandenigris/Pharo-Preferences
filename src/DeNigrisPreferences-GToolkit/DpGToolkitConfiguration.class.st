@@ -10,4 +10,5 @@ DpGToolkitConfiguration class >> apply [
 	GtPlaygroundToolRegistryAdaptor unregister.
 	BrEditorElement editorTabSize: 4.
 	BlSpace userScale: 1.2.
+	#GtPharoCoderSettings asClassIfPresent: [ :aCls | aCls isTraitMethodsFilterDefault: true ].
 ]
